@@ -1,0 +1,12 @@
+regisztráció: az alkalmazásba be lehet regisztrálni, név, emailcím és jelszó megadásával
+bejelentkezés: az alkalmazásba be lehet jelentkezni egy meglévő felhasználói fiókkal
+kijelentkezés: az alkalmazásból ki lehet jelentkezni az aktív session lezárásával
+követés: az alkalmazásban követni lehet más bloggolókat
+blog posztolása: az alkalmazással saját blogot lehet posztolni
+cikk részletek nézetre váltás: a kiválasztott blogcikket teljes formájában lehet olvasni
+Blog post szerkesztése: a már meglévő cikket szerkeszteni lehet
+Blog post törlése: meglévő cikk törlése
+Blog post kedvelése: teszés szerint kedvelni lehet blogokat
+Cimkézés: saját blog tagelése létrehozás vagy szerkesztés után
+Blog keresése címke alapján: tagek szerinti keresés
+Blog kommentálása: megjegyzés írása adott blogokhoz
