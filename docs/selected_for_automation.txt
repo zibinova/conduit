@@ -1,0 +1,25 @@
+A003 CON_TC_1010_REG User registration to Conduit app, registration trial with missing data felulet-adatbevitel intenziv, repetitív
+A002 - CON_TC_1011_REG User registration to Conduit app/uniq username check - felulet, kritikus, repetitív
+A004 - CON_TC_1012_REG User registration to Conduit app, email address formal validity check felulet a reszemrol, sok lepes
+A005 CON_TC_1013_REG User registration to Conduit app, password formal check felulet sok lepes
+CON_TC_1014_REG User registration to Conduit app, happy path a happy pathot erdemes automatizalni?az egyszer lefut jol azt kesz nem?
+CON_TC_1020_LOG User login to Conduit app, no account created yet hat nemtom, ez API teszt?
+A001 - CON_TC_1021_LOG User login to Conduit app, missing login data check felulet teszt adatbevitel intenziv
+CON_TC_1022_LOG User login to Conduit app, username appears without caption referral nem automatizalom, nem olyan kritikus
+CON_TC_1023_LOG User login to Conduit app, happy path, user logged in ez egyszer lefut maualisan szoval minek ?
+CON_TC_1024_LOG User logout of Conduit app, happy path lasd fentebb
+A008 - CON_TC_1030_FOL Following other users felulet kritikus
+CON_TC_1041_POST New blog post ez egyszeru lefut egyszer manualisan
+A009 CON_TC_1042_EDI Edit existing article felulet de API is? sok lepesbol all
+A110 CON_TC_1043_TAG Edit tags of article felulet repetitiv
+CON_TC_1044_DEL Delete existing blog post nem tudom lehet-e
+CON_TC_1050_FAV Favourite blog post automatizalnam ha lehet?
+CON_TC_1060_PAG Paginated Blog Post Feed nem vagyok biztos, h lehet automatizalni
+CON_TC_1070_ABS Blog posts with abstract nem automatizalnam, mert nem lehet
+A111 - CON_TC_1080_TAG Use of Tags automatizalnam mert sok lepesbol all 
+A112 CON_TC_1081_TAG Tag Feed Page Automatizalnam mert komplex felulet teszt
+CON_TC_1090_COM Adding comments to blogs nem automatizalnam mert egyszerű
+A113 CON_TC_1100_SET Profile Settings photo upload automatizalnam mert tul komplex lehet, vegtelen a feltoltheto url, vagy API teszt lenne
+A007 - CON_TC_1100_SET Profile Settings username update automatizalom mert kritikus felulet teszt
+
+hát nem tul atgondolt az ido miatt
