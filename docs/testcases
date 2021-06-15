@@ -1,0 +1,16 @@
+CON_TC_1010_REG User registration to Conduit app, registration trial with missing data
+CON_TC_1011_REG User registration to Conduit app/uniq username check
+CON_TC_1012_REG User registration to Conduit app, email address formal validity check
+CON_TC_1013_REG User registration to Conduit app, password formal check
+CON_TC_1014_REG User registration to Conduit app, happy path
+CON_TC_1020_LOG User login to Conduit app, no account created yet
+CON_TC_1021_LOG User login to Conduit app, missing login data check
+CON_TC_1022_LOG User login to Conduit app, username appears without caption referral
+CON_TC_1023_LOG User login to Conduit app, happy path, user logged in
+CON_TC_1024_LOG User logout of Conduit app, happy path
+CON_TC_1030_FOL Following other users
+CON_TC_1041_POST New blog post 
+CON_TC_1042_EDI Edit existing article
+CON_TC_1043_TAG Edit tags of article
+CON_TC_1044_DEL Delete existing blog post
+CON_TC_1050_FAV Favourite blog post
