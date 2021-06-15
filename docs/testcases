@@ -14,3 +14,10 @@ CON_TC_1042_EDI Edit existing article
 CON_TC_1043_TAG Edit tags of article
 CON_TC_1044_DEL Delete existing blog post
 CON_TC_1050_FAV Favourite blog post
+CON_TC_1060_PAG Paginated Blog Post Feed
+CON_TC_1070_ABS Blog posts with abstract
+CON_TC_1080_TAG Use of Tags
+CON_TC_1081_TAG Tag Feed Page
+CON_TC_1090_COM Adding comments to blogs
+CON_TC_1100_SET Profile Settings photo upload
+CON_TC_1100_SET Profile Settings username update 
