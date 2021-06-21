@@ -1,0 +1,170 @@
+{
+  "id": "ba8ba8eb-9e38-4e74-9d02-2e207d584bd4",
+  "version": "2.0",
+  "name": "post",
+  "url": "http://localhost:1667",
+  "tests": [{
+    "id": "c6c10cc9-2c01-445b-9add-4319a71bf4f5",
+    "name": "post",
+    "commands": [{
+      "id": "24867a21-9ee0-4abe-a859-0c7790400a56",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dcc09bb5-1359-4388-a85f-245a32a46be2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ef333e1-c5df-4c66-9ea2-53de66adc247",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=New Article",
+      "targets": [
+        ["linkText=New Article", "linkText"],
+        ["css=.navbar-nav > .nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'New Article')]", "xpath:link"],
+        ["xpath=//div[@id='app']/nav/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/editor')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' New Article')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c0b3de3-a98b-4e4c-8c24-6b53d503a540",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-control-lg",
+      "targets": [
+        ["css=.form-control-lg", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/div/form/fieldset/fieldset/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26e656d4-70dc-4d73-8838-8f54991925f9",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-control-lg",
+      "targets": [
+        ["css=.form-control-lg", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/div/form/fieldset/fieldset/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Title"
+    }, {
+      "id": "9b7f45a2-ab07-4b30-b42c-962df3428e2f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(2) > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/div/form/fieldset/fieldset[2]/input", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53d5e294-82a7-473a-a004-e5baca181ba6",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(2) > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/div/form/fieldset/fieldset[2]/input", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/input", "xpath:position"]
+      ],
+      "value": "About me"
+    }, {
+      "id": "77fc187f-2e21-49c3-8ef1-cb99c96d827f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(3) > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div/div/form/fieldset/fieldset[3]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c74f8a0d-ded1-4f63-b771-2f382bec56f4",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(3) > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div/div/form/fieldset/fieldset[3]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Writing"
+    }, {
+      "id": "6291d74c-421c-43f7-80b4-809f48bc6a4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ti-new-tag-input",
+      "targets": [
+        ["css=.ti-new-tag-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/div/form/fieldset/fieldset[4]/div/div/ul/li/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aed88251-fbdb-4c53-9206-ac4b9c766a70",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ti-new-tag-input",
+      "targets": [
+        ["css=.ti-new-tag-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/div/form/fieldset/fieldset[4]/div/div/ul/li/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": "me"
+    }, {
+      "id": "b738483d-a6db-4cb7-a15b-ef11ca2a04ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Publish Article')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "98617759-17f9-46f5-927a-90b6d9274454",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Publish Article')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "36abc64e-295b-49f3-b5eb-26c37aab75e6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c6c10cc9-2c01-445b-9add-4319a71bf4f5"]
+  }],
+  "urls": ["http://localhost:1667/"],
+  "plugins": []
+}
