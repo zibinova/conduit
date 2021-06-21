@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Mon Jun 21 11:06:18 GMT 2021","Mon Jun 21 11:06:18 GMT 2021","0","seleniumide-tests","test_registration","TestRegistration","","","test_registration",""
+"broken","Mon Jun 21 11:06:15 GMT 2021","Mon Jun 21 11:06:15 GMT 2021","0","seleniumide-tests","test_login","TestLogin","","","test_login",""
+"broken","Mon Jun 21 11:06:17 GMT 2021","Mon Jun 21 11:06:17 GMT 2021","0","seleniumide-tests","test_post","TestPost","","","test_post",""
