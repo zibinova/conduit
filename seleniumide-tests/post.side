@@ -2,7 +2,7 @@
   "id": "ba8ba8eb-9e38-4e74-9d02-2e207d584bd4",
   "version": "2.0",
   "name": "post",
-  "url": "http://localhost:1667",
+  "url": "http://localhost:1667/#/",
   "tests": [{
     "id": "c6c10cc9-2c01-445b-9add-4319a71bf4f5",
     "name": "post",
@@ -165,6 +165,6 @@
     "timeout": 300,
     "tests": ["c6c10cc9-2c01-445b-9add-4319a71bf4f5"]
   }],
-  "urls": ["http://localhost:1667/"],
+  "urls": ["http://localhost:1667/", "http://localhost:1667/#/"],
   "plugins": []
 }
