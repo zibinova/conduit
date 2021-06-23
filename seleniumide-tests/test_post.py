@@ -12,27 +12,35 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 class TestPost():
-  def setup_method(self, method):
-    self.driver = webdriver.Chrome()
-    self.vars = {}
-  
-  def teardown_method(self, method):
-    self.driver.quit()
-  
-  def test_post(self):
-    self.driver.get("http://localhost:1667/")
-    self.driver.set_window_size(1552, 840)
-    self.driver.find_element(By.LINK_TEXT, "New Article").click()
-    self.driver.find_element(By.CSS_SELECTOR, ".form-control-lg").click()
-    self.driver.find_element(By.CSS_SELECTOR, ".form-control-lg").send_keys("Title")
-    self.driver.find_element(By.CSS_SELECTOR, ".form-group:nth-child(2) > .form-control").click()
-    self.driver.find_element(By.CSS_SELECTOR, ".form-group:nth-child(2) > .form-control").send_keys("About me")
-    self.driver.find_element(By.CSS_SELECTOR, ".form-group:nth-child(3) > .form-control").click()
-    self.driver.find_element(By.CSS_SELECTOR, ".form-group:nth-child(3) > .form-control").send_keys("Writing")
-    self.driver.find_element(By.CSS_SELECTOR, ".ti-new-tag-input").click()
-    self.driver.find_element(By.CSS_SELECTOR, ".ti-new-tag-input").send_keys("me")
-    self.driver.find_element(By.CSS_SELECTOR, ".btn").click()
-    element = self.driver.find_element(By.CSS_SELECTOR, ".btn")
-    actions = ActionChains(self.driver)
-    actions.move_to_element(element).perform()
-  
+    def setup_method(self, method):
+        self.driver = webdriver.Chrome()
+        self.vars = {}
+
+    def teardown_method(self, method):
+        self.driver.quit()
+
+    def test_post(self):
+        self.driver.get("http://localhost:1667/#/")
+        self.driver.set_window_size(1552, 840)
+        self.driver.find_element(By.LINK_TEXT, "Sign in").click()
+        self.driver.find_element(By.CSS_SELECTOR, ".row").click()
+        self.driver.find_element(By.CSS_SELECTOR, ".form-group:nth-child(1) > .form-control").send_keys(
+            "eszti@teszt.com")
+        self.driver.find_element(By.CSS_SELECTOR, ".row").click()
+        self.driver.find_element(By.CSS_SELECTOR, ".form-group:nth-child(2) > .form-control").send_keys("Abcdef123")
+        self.driver.find_element(By.CSS_SELECTOR, ".btn").click()
+        self.driver.find_element(By.LINK_TEXT, "New Article").click()
+        self.driver.find_element(By.CSS_SELECTOR, ".form-control-lg").click()
+        self.driver.find_element(By.CSS_SELECTOR, ".form-control-lg").send_keys("title")
+        self.driver.find_element(By.CSS_SELECTOR, ".form-group:nth-child(2) > .form-control").send_keys("me")
+        self.driver.find_element(By.CSS_SELECTOR, ".form-group:nth-child(3) > .form-control").send_keys("writing")
+        self.driver.find_element(By.CSS_SELECTOR, ".ti-new-tag-input").click()
+        self.driver.find_element(By.CSS_SELECTOR, ".ti-new-tag-input").send_keys("me me")
+        self.driver.find_element(By.CSS_SELECTOR, ".btn").click()
+        element = self.driver.find_element(By.CSS_SELECTOR, ".btn")
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element).perform()
+        element = self.driver.find_element(By.CSS_SELECTOR, ".btn")
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element).perform()
+
