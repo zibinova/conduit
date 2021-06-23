@@ -6,9 +6,10 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
         
-      - name: Builds and Starts
+      - name: Start conduit
         run: |
           docker-compose up -d
+     
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
         with:
@@ -34,39 +35,15 @@ jobs:
           
       - name: Install seleniumbase
         run: pip install seleniumbase
-
+ 
       - name: Install chromedriver
         run: |
           seleniumbase install chromedriver
+      
+     
       - name: Run tests
+        continue-on-error: true
+        run: |
          selenium-side-runner -c "browserName=chrome goog:chromeOptions.args=[disable-infobars, headless]" seleniumide-tests/registration.side
          selenium-side-runner -c "browserName=chrome goog:chromeOptions.args=[disable-infobars, headless]" seleniumide-tests/login.side
          selenium-side-runner -c "browserName=chrome goog:chromeOptions.args=[disable-infobars, headless]" seleniumide-tests/post.side
-         
-      - name: Run Tests
-        run: |
-          pytest --alluredir=allure-results
-      
-      - name: Get Allure history
-        uses: actions/checkout@v2
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages    
-          
-      - name: Allure Report action from marketplace
-        uses: simple-elf/allure-report-action@master
-        if: always()
-        with:
-         allure_results: allure-results
-         allure_history: allure-history
-         keep_reports: 20
-        
-      - name: Deploy report to Github Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         PUBLISH_BRANCH: gh-pages
-         PUBLISH_DIR: allure-history
