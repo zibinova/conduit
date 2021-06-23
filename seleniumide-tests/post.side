@@ -165,6 +165,6 @@
     "timeout": 300,
     "tests": ["c6c10cc9-2c01-445b-9add-4319a71bf4f5"]
   }],
-  "urls": ["http://localhost:1667/", "http://localhost:1667/#/"],
+  "urls": ["http://localhost:1667/#/", "http://localhost:1667/#/"],
   "plugins": []
 }
