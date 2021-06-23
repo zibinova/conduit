@@ -24,7 +24,7 @@
       "id": "56c81fcd-68b5-4533-89d8-58c6f91f0b46",
       "comment": "",
       "command": "click",
-      "target": "css=.form-group:nth-child(1) > .form-control",
+      "target": "xpath=//div[@id='app']/div/div/div/div/form/fieldset/input",
       "targets": [
         ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
         ["xpath=//input[@type='text']", "xpath:attributes"],
@@ -36,7 +36,7 @@
       "id": "d252e6c5-4ae0-4e44-bf18-583046891fad",
       "comment": "",
       "command": "type",
-      "target": "css=.form-group:nth-child(1) > .form-control",
+      "target": "xpath=//div[@id='app']/div/div/div/div/form/fieldset/input",
       "targets": [
         ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
         ["xpath=//input[@type='text']", "xpath:attributes"],
@@ -48,7 +48,7 @@
       "id": "1e7d93f7-dd23-416f-a0cb-ecba4058d65c",
       "comment": "",
       "command": "click",
-      "target": "css=.form-group:nth-child(2) > .form-control",
+      "target": "xpath=//div[@id='app']/div/div/div/div/form/fieldset[2]/input",
       "targets": [
         ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
         ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
@@ -60,7 +60,7 @@
       "id": "6b64e0f6-be7e-4b3c-83f2-657dc057ecbf",
       "comment": "",
       "command": "type",
-      "target": "css=.form-group:nth-child(2) > .form-control",
+      "target": "xpath=//div[@id='app']/div/div/div/div/form/fieldset[2]/input",
       "targets": [
         ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
         ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
@@ -72,7 +72,7 @@
       "id": "94562f97-548a-4903-bd6f-17228f28b6b0",
       "comment": "",
       "command": "click",
-      "target": "css=.form-group:nth-child(3) > .form-control",
+      "target": "xpath=//div[@id='app']/div/div/div/div/form/fieldset[3]/input",
       "targets": [
         ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
         ["xpath=//input[@type='password']", "xpath:attributes"],
@@ -84,7 +84,7 @@
       "id": "d749a0ec-70b4-409a-9aa0-72a5d9eb82ea",
       "comment": "",
       "command": "type",
-      "target": "css=.form-group:nth-child(3) > .form-control",
+      "target": "xpath=//div[@id='app']/div/div/div/div/form/fieldset[3]/input",
       "targets": [
         ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
         ["xpath=//input[@type='password']", "xpath:attributes"],
