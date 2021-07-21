@@ -1,182 +1,175 @@
 #  CON_TC_1010_REG-1014_REG, User registration to Conduit app
+def test_registration():
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from webdriver_manager.chrome import ChromeDriverManager
-import time
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait
+    from webdriver_manager.chrome import ChromeDriverManager
+    import time
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
-# driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)  # headless mode
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    # driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)  # headless mode
 
-# options = Options()
-# options.add_argument('--headless')
-# options.add_argument('--disable-gpu')
+    # options = Options()
+    # options.add_argument('--headless')
+    # options.add_argument('--disable-gpu')
 
-driver.get("http://localhost:1667")
+    driver.get("http://localhost:1667")
 
-# cookie handling
+    # cookie handling
 
-cookie_accept_button = driver.find_element_by_xpath("//div[@class='cookie__bar__buttons']/button[2]")
-cookie_accept_button.click()
+    cookie_accept_button = driver.find_element_by_xpath("//div[@class='cookie__bar__buttons']/button[2]")
+    cookie_accept_button.click()
 
-# getting sign-up form
+    # getting sign-up form
 
-sign_up_link = driver.find_element_by_xpath("//ul/li[3]/a")
-sign_up_link.click()
+    sign_up_link = driver.find_element_by_xpath("//ul/li[3]/a")
+    sign_up_link.click()
 
+    def user_registration(username, email, password):
 
-def user_registration(username, email, password):
+        user_name = driver.find_element_by_xpath("//form/fieldset[1]/input")
+        e_mail = driver.find_element_by_xpath("//form/fieldset[2]/input")
+        pass_word = driver.find_element_by_xpath("//form/fieldset[3]/input")
+        sign_up_button = driver.find_element_by_xpath('//form/button')
 
-    user_name = driver.find_element_by_xpath("//form/fieldset[1]/input")
-    e_mail = driver.find_element_by_xpath("//form/fieldset[2]/input")
-    pass_word = driver.find_element_by_xpath("//form/fieldset[3]/input")
-    sign_up_button = driver.find_element_by_xpath('//form/button')
+        user_name.send_keys(username)
+        e_mail.send_keys(email)
+        pass_word.send_keys(password)
+        sign_up_button.click()
 
-    user_name.send_keys(username)
-    e_mail.send_keys(email)
-    pass_word.send_keys(password)
-    sign_up_button.click()
+    def assert_handling(expected_title, expected_text):
+        swal_title = driver.find_element_by_xpath("//div[@class='swal-title']").text
+        swal_text = driver.find_element_by_class_name("swal-text").text
+        assert (swal_title == expected_title and swal_text == expected_text )
 
-
-def assert_handling(expected_title, expected_text):
-    swal_title = driver.find_element_by_xpath("//div[@class='swal-title']").text
-    swal_text = driver.find_element_by_class_name("swal-text").text
-    assert (swal_title == expected_title and swal_text == expected_text )
-
-
-def back_to_form():                            # acknowledging error/getting sign up form back
-    ok_button = driver.find_element_by_class_name("swal-button")
-    ok_button.click()
+    def back_to_form():                            # acknowledging error/getting sign up form back
+        ok_button = driver.find_element_by_class_name("swal-button")
+        ok_button.click()
 
 # registration attempts with missing data/blank form validation
 
+    user_registration("", "", "")
 
-user_registration("", "", "")
+    time.sleep(3)
 
-time.sleep(3)
+    assert_handling("Registration failed!", "Username field required.")
 
-assert_handling("Registration failed!", "Username field required.")
-
-back_to_form()
+    back_to_form()
 
 
 # missing email and password
 
-user_registration("testella", "", "")
+    user_registration("testella", "", "")
 
-time.sleep(3)
+    time.sleep(3)
 
-assert_handling("Registration failed!", "Email field required.")
+    assert_handling("Registration failed!", "Email field required.")
 
-back_to_form()
+    back_to_form()
 
 # missing password
 
-user_registration("testella", "testella@gmail.hu", "")
+    user_registration("testella", "testella@gmail.hu", "")
 
-time.sleep(3)
+    time.sleep(3)
 
-assert_handling("Registration failed!", "Password field required.")
+    assert_handling("Registration failed!", "Password field required.")
 
-back_to_form()
+    back_to_form()
 
 
 #  CON_TC_1011_REG email address formal validity check 1
 
-user_registration("testella", "testella@gmail", "Teszt123")
+    user_registration("testella", "testella@gmail", "Teszt123")
 
-time.sleep(3)
+    time.sleep(3)
 
-assert_handling("Registration failed!", "Email must be a valid email.")
+    assert_handling("Registration failed!", "Email must be a valid email.")
 
-back_to_form()
+    back_to_form()
 
 #  *** 2
 
-user_registration("testella", "testellagmail.hu", "Teszt123")
+    user_registration("testella", "testellagmail.hu", "Teszt123")
 
-time.sleep(3)
+    time.sleep(3)
 
-assert_handling("Registration failed!", "Email must be a valid email.")
+    assert_handling("Registration failed!", "Email must be a valid email.")
 
-back_to_form()
+    back_to_form()
 
 # CON_TC_1012_REG password formal check 1
 
+    user_registration("testella", "testella@gmail.ae", "teszt")
 
-user_registration("testella", "testella@gmail.ad", "teszt")
+    time.sleep(3)
 
-time.sleep(3)
+    assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
+                                            "1 uppercase letter, and 1 lowercase letter.")
 
-
-assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
-                                        "1 uppercase letter, and 1 lowercase letter.")
-
-
-back_to_form()
+    back_to_form()
 
 # check 2
 
-user_registration("testella", "testella@gmail.ad", "12345678")
+    user_registration("testella", "testella@gmail.ae", "12345678")
 
-time.sleep(3)
+    time.sleep(3)
 
-
-assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
-                                        "1 uppercase letter, and 1 lowercase letter.")
-back_to_form()
+    assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
+                                            "1 uppercase letter, and 1 lowercase letter.")
+    back_to_form()
 
 # check 3
 
-user_registration("testella", "testella@gmail.ad", "teszt123")
+    user_registration("testella", "testella@gmail.ae", "teszt123")
 
-time.sleep(3)
+    time.sleep(3)
 
-assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
-                                        "1 uppercase letter, and 1 lowercase letter.")
-back_to_form()
+    assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
+                                            "1 uppercase letter, and 1 lowercase letter.")
+    back_to_form()
 
 
 # CON_TC_1013_REG happy path successful user reg.
 
-user_registration("testella", "testella@gmail.ad", "Teszt123")
+    user_registration("testella", "testella@gmail.ae", "Teszt123")
 
-time.sleep(2)
+    time.sleep(2)
 
-assert_handling("Welcome!", "Your registration was successful!")
+    assert_handling("Welcome!", "Your registration was successful!")
 
-back_to_form()
+    back_to_form()
 
-user = driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[4]/a")
+    user = driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[4]/a")
 
-assert user.is_displayed()
-assert user.text == "testella"
+    assert user.is_displayed()
+    assert user.text == "testella"
 
 # CON_TC_1014_REG, Sign-up with account already existing
 
 # perform logout
-driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[5]/a").click()
+    driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[5]/a").click()
 
 
 # getting sign-up form
-sign_up_link = driver.find_element_by_xpath("//ul/li[3]/a").click()
+    driver.find_element_by_xpath("//ul/li[3]/a").click()
 
-time.sleep(2)
-user_registration("testella", "testella@gmail.ad", "Teszt123")
+    time.sleep(2)
+    user_registration("testella", "testella@gmail.ae", "Teszt123")
 
-time.sleep(3)
+    time.sleep(3)
 
-assert_handling("Registration failed!", "Email already taken.")
+    assert_handling("Registration failed!", "Email already taken.")
 
 
 # CON_TC_1015_REG, Sign-up with not registered email but already existing username
 # this test gives assertion error, app accepts multiple registration with same usernames
 
-back_to_form()
+    back_to_form()
 
-user_registration("testella", "testella@gmail.zx", "Teszt123")
-time.sleep(2)
-assert_handling("Registration failed!", "Username already taken.")
+    user_registration("testella", "testella@gmail.zu", "Teszt123")
+    time.sleep(2)
+    assert_handling("Registration failed!", "Username already taken.")
 
 
