@@ -26,7 +26,7 @@ sign_up_link = driver.find_element_by_xpath("//ul/li[3]/a")
 sign_up_link.click()
 
 
-def registration(username, email, password):
+def user_registration(username, email, password):
 
     user_name = driver.find_element_by_xpath("//form/fieldset[1]/input")
     e_mail = driver.find_element_by_xpath("//form/fieldset[2]/input")
@@ -50,112 +50,129 @@ def back_to_form():                            # acknowledging error/getting sig
     ok_button.click()
 
 # registration attempts with missing data/blank form validation
-#
-#
-# registration("", "", "")
-#
-# time.sleep(3)
-#
-# assert_handling("Registration failed!", "Username field required.")
-#
-# back_to_form()
-#
-#
-# # missing email and password
-#
-#
-# registration("testella", "", "")
-#
-# time.sleep(3)
-#
-# assert_handling("Registration failed!", "Email field required.")
-#
-# back_to_form()
-#
-# # missing password
-#
-# registration("testella", "testella@gmail.hu", "")
-#
-# time.sleep(3)
-#
-# assert_handling("Registration failed!", "Password field required.")
-#
-# back_to_form()
-#
-#
-# # CON_TC_1011_REG email address formal validity check 1
-#
-# registration("testella", "testella@gmail", "Teszt123")
-#
-# time.sleep(3)
-#
-# assert_handling("Registration failed!", "Email must be a valid email.")
-#
-# back_to_form()
-#
-# # *** 2
-#
-# registration("testella", "testellagmail.hu", "Teszt123")
-#
-# time.sleep(3)
-#
-# assert_handling("Registration failed!", "Email must be a valid email.")
-#
-# back_to_form()
+
+
+user_registration("", "", "")
+
+time.sleep(3)
+
+assert_handling("Registration failed!", "Username field required.")
+
+back_to_form()
+
+
+# missing email and password
+
+user_registration("testella", "", "")
+
+time.sleep(3)
+
+assert_handling("Registration failed!", "Email field required.")
+
+back_to_form()
+
+# missing password
+
+user_registration("testella", "testella@gmail.hu", "")
+
+time.sleep(3)
+
+assert_handling("Registration failed!", "Password field required.")
+
+back_to_form()
+
+
+#  CON_TC_1011_REG email address formal validity check 1
+
+user_registration("testella", "testella@gmail", "Teszt123")
+
+time.sleep(3)
+
+assert_handling("Registration failed!", "Email must be a valid email.")
+
+back_to_form()
+
+#  *** 2
+
+user_registration("testella", "testellagmail.hu", "Teszt123")
+
+time.sleep(3)
+
+assert_handling("Registration failed!", "Email must be a valid email.")
+
+back_to_form()
 
 # CON_TC_1012_REG password formal check 1
 
 
-# registration("testella", "testella@gmail.hu", "teszt")
-#
-# time.sleep(3)
-#
-# assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, 1 uppercase letter,
-#                                         "and 1 lowercase letter.")
-# back_to_form()
+user_registration("testella", "testella@gmail.hu", "teszt")
+
+time.sleep(3)
+
+assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, 1 uppercase letter"
+                "and 1 lowercase letter.")
+back_to_form()
 
 # check 2
-# registration("testella", "testella@gmail.hu", "12345678")
-#
-# time.sleep(3)
-#
-# assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, 1 uppercase letter,
-#                                         "and 1 lowercase letter.")
-# back_to_form()
+
+user_registration("testella", "testella@gmail.hu", "12345678")
+
+time.sleep(3)
+
+assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, 1 uppercase letter"
+                "and 1 lowercase letter.")
+back_to_form()
 
 # check 3
-# registration("testella", "testella@gmail.hu", "teszt123")
-#
-# time.sleep(3)
-#
-# assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, 1 uppercase letter,
-#                                         "and 1 lowercase letter.")
-# back_to_form()
+
+user_registration("testella", "testella@gmail.hu", "teszt123")
+
+time.sleep(3)
+
+assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, 1 uppercase letter"
+                "and 1 lowercase letter.")
+back_to_form()
 
 
 # CON_TC_1013_REG happy path successful user reg.
 
-registration("testella", "testella@gmail.hu", "Teszt123")
+user_registration("testella", "testella@gmail.ac", "Teszt123")
 
-time.sleep(3)
+time.sleep(2)
 
 assert_handling("Welcome!", "Your registration was successful!")
 
 back_to_form()
 
+user = driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[4]/a")
+
+assert user.is_displayed()
+assert user.text == "testella"
+
+# CON_TC_1014_REG, Sign-up with account already existing
+
+# perform logout
+driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[5]/a").click()
 
 
-# CON_TC_1014_REG, Uniq username check
+# getting sign-up form
+sign_up_link = driver.find_element_by_xpath("//ul/li[3]/a").click()
+
+time.sleep(2)
+user_registration("testella", "testella@gmail.ac", "Teszt123")
+
+time.sleep(3)
+
+assert_handling("Registration failed!", "Email already taken.")
+
+
+# CON_TC_1015_REG, Sign-up with not registered email but already existing username
 # this test gives assertion error, app accepts multiple registration with same usernames
 
-# registration("testella", "testella@gmail.com", "Teszt123")
-#
-# time.sleep(3)
-#
-# swal_title = driver.find_element_by_xpath("//div[@class='swal-title']").text
-# swal_text = driver.find_element_by_class_name("swal-text").text
-# assert (swal_title == "Registration failed!" and swal_text == "Username already taken.")
+back_to_form()
 
-
+user_registration("testella", "testella@gmail.zy", "Teszt123")
+time.sleep(2)
+assert_handling("Registration failed!", "Username already taken.")
 
 
