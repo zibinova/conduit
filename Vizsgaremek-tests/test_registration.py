@@ -105,38 +105,42 @@ back_to_form()
 # CON_TC_1012_REG password formal check 1
 
 
-user_registration("testella", "testella@gmail.hu", "teszt")
+user_registration("testella", "testella@gmail.ad", "teszt")
 
 time.sleep(3)
 
-assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, 1 uppercase letter"
-                "and 1 lowercase letter.")
+
+assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
+                                        "1 uppercase letter, and 1 lowercase letter.")
+
+
 back_to_form()
 
 # check 2
 
-user_registration("testella", "testella@gmail.hu", "12345678")
+user_registration("testella", "testella@gmail.ad", "12345678")
 
 time.sleep(3)
 
-assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, 1 uppercase letter"
-                "and 1 lowercase letter.")
+
+assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
+                                        "1 uppercase letter, and 1 lowercase letter.")
 back_to_form()
 
 # check 3
 
-user_registration("testella", "testella@gmail.hu", "teszt123")
+user_registration("testella", "testella@gmail.ad", "teszt123")
 
 time.sleep(3)
 
-assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, 1 uppercase letter"
-                "and 1 lowercase letter.")
+assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
+                                        "1 uppercase letter, and 1 lowercase letter.")
 back_to_form()
 
 
 # CON_TC_1013_REG happy path successful user reg.
 
-user_registration("testella", "testella@gmail.ac", "Teszt123")
+user_registration("testella", "testella@gmail.ad", "Teszt123")
 
 time.sleep(2)
 
@@ -159,7 +163,7 @@ driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[5]/a").click()
 sign_up_link = driver.find_element_by_xpath("//ul/li[3]/a").click()
 
 time.sleep(2)
-user_registration("testella", "testella@gmail.ac", "Teszt123")
+user_registration("testella", "testella@gmail.ad", "Teszt123")
 
 time.sleep(3)
 
@@ -171,7 +175,7 @@ assert_handling("Registration failed!", "Email already taken.")
 
 back_to_form()
 
-user_registration("testella", "testella@gmail.zy", "Teszt123")
+user_registration("testella", "testella@gmail.zx", "Teszt123")
 time.sleep(2)
 assert_handling("Registration failed!", "Username already taken.")
 
