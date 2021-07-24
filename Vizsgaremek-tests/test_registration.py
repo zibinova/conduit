@@ -1,4 +1,4 @@
-#  CON_TC_1000_REG-1014_REG, User registration to Conduit app
+#  CON_TC_1010_REG-1013_REG, User registration to Conduit app
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -17,22 +17,6 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 # options.add_argument('--disable-gpu')
 
 driver.get("http://localhost:1667")
-
-
-# CON_TC_1000_REG giving cookie policy consent and check:
-
-
-def test_reg_1000():
-    assert driver.find_element_by_id('cookie-policy-panel').is_displayed()
-    cookie_accept_button = driver.find_element_by_xpath("//div[@class='cookie__bar__buttons']/button[2]")
-    cookie_accept_button.click()
-
-
-# getting sign-up form
-
-
-sign_up_link = driver.find_element_by_xpath("//ul/li[3]/a")
-sign_up_link.click()
 
 
 def user_registration(username, email, password):
@@ -71,6 +55,11 @@ rnd_pw = numeric_part + lowercase_part + uppercase_part + special_part
 
 
 # registration attempts with missing data/blank form validation:
+# getting sign-up form
+
+sign_up_link = driver.find_element_by_xpath("//ul/li[3]/a")
+sign_up_link.click()
+time.sleep(3)
 
 
 def test_reg_1010():
@@ -93,24 +82,28 @@ def test_reg_1010():
     user_registration(rnd_un, rnd_em, "")
     time.sleep(3)
     assert_handling("Registration failed!", "Password field required.")
-    back_to_form()
+
 
 #  CON_TC_1011_REG email address formal validity check (1)
 
 
 def test_reg_1011():
 
+    back_to_form()
+    time.sleep(3)
+    # rnd_un1 = "".join([random.choice(string.ascii_lowercase) for _ in range(5)])
     rnd_em_inv_1 = rnd_un + "@" + rnd_un
     user_registration(rnd_un, rnd_em_inv_1, rnd_pw)
     time.sleep(3)
     assert_handling("Registration failed!", "Email must be a valid email.")
-    back_to_form()
-    time.sleep(3)
 
     #  *** check 2
 
+    back_to_form()
+    time.sleep(3)
     rnd_em_inv_2 = rnd_un + rnd_un + ".com"
     user_registration(rnd_un, rnd_em_inv_2, rnd_pw)
+    time.sleep(3)
     assert_handling("Registration failed!", "Email must be a valid email.")
     back_to_form()
 
@@ -153,43 +146,47 @@ def test_reg_1012():
     assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
                                             "1 uppercase letter, and 1 lowercase letter.")
     back_to_form()
+    time.sleep(2)
 
 # CON_TC_1013_REG happy path successful user reg.
 
 
 def test_reg_1013():
     user_registration(rnd_un, rnd_em, rnd_pw)
-    time.sleep(2)
+    time.sleep(5)
     assert_handling("Welcome!", "Your registration was successful!")
     back_to_form()
+    time.sleep(2)
     user = driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[4]/a")
     assert user.is_displayed()
     assert user.text == rnd_un
-    time.sleep(2)
 
     # perform logout
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='app']/nav/div/ul/li[5]/a"))).click()
-    time.sleep(3)
-
-
+    time.sleep(2)
+    logout = driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[5]/a")
+    logout.click()
+    time.sleep(2)
 # CON_TC_1014_REG, Sign-up with account already existing
 
 
 def test_reg_1014():
     # getting sign-up form
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//ul/li[3]/a"))).click()
-    time.sleep(5)
+    sign_up_link.click()
+    time.sleep(3)
     user_registration("testella", "testella@gmail.com", "Teszt123")
     time.sleep(5)
     assert_handling("Registration failed!", "Email already taken.")
 
 
 # CON_TC_1015_REG, Sign-up with not yet registered email but already existing username
-# this test gives assertion error, app accepts multiple registration with same usernames/or not accepting valid email
+# this test expected to give assertion error, since app accepts multiple registration with same usernames
 
 
 def test_reg_1015():
     back_to_form()
-    user_registration("testella", rnd_em, rnd_pw)
+    time.sleep(2)
+    rnd_em1 = lowercase_part + "@" + lowercase_part + ".com"
+    user_registration("testella", rnd_em1, rnd_pw)
     time.sleep(5)
     assert_handling("Registration failed!", "Username already taken.")
+
