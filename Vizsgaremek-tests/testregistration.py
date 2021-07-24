@@ -18,6 +18,10 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 
 driver.get("http://localhost:1667")
 
+# giving cookie consent
+cookie_accept_button = driver.find_element_by_xpath("//div[@class='cookie__bar__buttons']/button[2]")
+cookie_accept_button.click()
+
 
 def user_registration(username, email, password):
     user_name = driver.find_element_by_xpath("//form/fieldset[1]/input")
@@ -54,12 +58,13 @@ rnd_em = rnd_un + "@" + lowercase_part + ".com"
 rnd_pw = numeric_part + lowercase_part + uppercase_part + special_part
 
 
-# registration attempts with missing data/blank form validation:
 # getting sign-up form
 
 sign_up_link = driver.find_element_by_xpath("//ul/li[3]/a")
 sign_up_link.click()
 time.sleep(3)
+
+# registration attempts with missing data/blank form validation:
 
 
 def test_reg_1010():
@@ -166,6 +171,7 @@ def test_reg_1013():
     logout = driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[5]/a")
     logout.click()
     time.sleep(2)
+
 # CON_TC_1014_REG, Sign-up with account already existing
 
 
