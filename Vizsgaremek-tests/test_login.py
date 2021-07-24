@@ -55,6 +55,7 @@ def test_login():
     lowercase_part = "".join([random.choice(string.ascii_lowercase) for _ in range(4)])
     uppercase_part = "".join([random.choice(string.ascii_uppercase) for _ in range(4)])
     special_part = "".join([random.choice(string.punctuation) for _ in range(2)])
+
     rnd_un = "".join([random.choice(string.ascii_lowercase) for _ in range(5)])
     rnd_em = rnd_un + "@" + lowercase_part + ".com"
     rnd_pw = numeric_part + lowercase_part + uppercase_part + special_part
@@ -68,9 +69,9 @@ def test_login():
     # CON_TC_1021_LOG User login to Conduit app, missing login data check
 
     # blank input fields
-    # user_login("", "")
-    # time.sleep(2)
-    # assert_handling("Login failed!", "Email field required.")
+    user_login("", "")
+    time.sleep(2)
+    assert_handling("Login failed!", "Email field required.")
 
     # missing password
 
