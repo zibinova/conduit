@@ -19,7 +19,7 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get("http://localhost:1667")
 
 
-# giving cookie consent:
+# CON_TC_1000_REG giving cookie policy consent and check:
 
 
 def test_reg_1000():
@@ -44,7 +44,7 @@ def user_registration(username, email, password):
     user_name.send_keys(username)
     e_mail.send_keys(email)
     pass_word.send_keys(password)
-    time.sleep(8)
+    time.sleep(3)
     sign_up_button.click()
 
 
@@ -61,114 +61,115 @@ def back_to_form():  # acknowledging error/getting sign up form back
 
 # generating random test data
 
-
+numeric_part = "".join([random.choice(string.digits) for _ in range(2)])
+lowercase_part = "".join([random.choice(string.ascii_lowercase) for _ in range(4)])
+uppercase_part = "".join([random.choice(string.ascii_uppercase) for _ in range(4)])
+special_part = "".join([random.choice(string.punctuation) for _ in range(2)])
 rnd_un = "".join([random.choice(string.ascii_lowercase) for _ in range(5)])
-rnd_em = rnd_un + "@" + rnd_un + ".com"
-pwchars = string.ascii_lowercase + string.ascii_uppercase + string.punctuation + string.digits
-digit = 2
-rnd_pw = "".join([random.choice(pwchars) for _ in range(8)])
+rnd_em = rnd_un + "@" + lowercase_part + ".com"
+rnd_pw = numeric_part + lowercase_part + uppercase_part + special_part
 
 
 # registration attempts with missing data/blank form validation:
 
 
-# def test_reg_1010():
-#
-#     user_registration("", "", "")
-#     time.sleep(3)
-#     assert_handling("Registration failed!", "Username field required.")
-#     back_to_form()
-#
-#
-# # missing email and password
-#
-#     user_registration(rnd_un, "", "")
-#     time.sleep(3)
-#     assert_handling("Registration failed!", "Email field required.")
-#     back_to_form()
-#
-# # missing password
-#
-#     user_registration(rnd_un, rnd_em, "")
-#     time.sleep(3)
-#     assert_handling("Registration failed!", "Password field required.")
-#     back_to_form()
-#
-# #  CON_TC_1011_REG email address formal validity check (1)
-#
-#
-# def test_reg_1011():
-#
-#     rnd_em_inv_1 = rnd_un + "@" + rnd_un
-#     user_registration(rnd_un, rnd_em_inv_1, rnd_pw)
-#     time.sleep(3)
-#     assert_handling("Registration failed!", "Email must be a valid email.")
-#     back_to_form()
-#
-#     #  *** check 2
-#
-#     rnd_em_inv_2 = rnd_un + rnd_un + ".com"
-#     user_registration(rnd_un, rnd_em_inv_2, rnd_pw)
-#     time.sleep(3)
-#     assert_handling("Registration failed!", "Email must be a valid email.")
-#     back_to_form()
-#
+def test_reg_1010():
+
+    user_registration("", "", "")
+    time.sleep(3)
+    assert_handling("Registration failed!", "Username field required.")
+    back_to_form()
+    time.sleep(3)
+
+# missing email and password
+
+    user_registration(rnd_un, "", "")
+    time.sleep(3)
+    assert_handling("Registration failed!", "Email field required.")
+    back_to_form()
+
+# missing password
+
+    user_registration(rnd_un, rnd_em, "")
+    time.sleep(3)
+    assert_handling("Registration failed!", "Password field required.")
+    back_to_form()
+
+#  CON_TC_1011_REG email address formal validity check (1)
+
+
+def test_reg_1011():
+
+    rnd_em_inv_1 = rnd_un + "@" + rnd_un
+    user_registration(rnd_un, rnd_em_inv_1, rnd_pw)
+    time.sleep(3)
+    assert_handling("Registration failed!", "Email must be a valid email.")
+    back_to_form()
+    time.sleep(3)
+
+    #  *** check 2
+
+    rnd_em_inv_2 = rnd_un + rnd_un + ".com"
+    user_registration(rnd_un, rnd_em_inv_2, rnd_pw)
+    assert_handling("Registration failed!", "Email must be a valid email.")
+    back_to_form()
+
 # # CON_TC_1012_REG password formal check
-#
-#
-# def test_reg_1012():
-#     #  check 1 digit missing
-#     pwchars_inv_1 = string.ascii_lowercase + string.ascii_uppercase
-#     rnd_pw_inv_1 = "".join([random.choice(pwchars_inv_1) for _ in range(8)])
-#     user_registration(rnd_un, rnd_em, rnd_pw_inv_1)
-#     time.sleep(3)
-#     assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
-#                                             "1 uppercase letter, and 1 lowercase letter.")
-#
-#     back_to_form()
-#
-#     # check 2 uppercase missing
-#     pwchars_inv_2 = string.ascii_lowercase + string.digits
-#     rnd_pw_inv_2 = "".join([random.choice(pwchars_inv_2) for _ in range(8)])
-#     user_registration(rnd_un, rnd_em, rnd_pw_inv_2)
-#     time.sleep(3)
-#     assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
-#                                             "1 uppercase letter, and 1 lowercase letter.")
-#     back_to_form()
-#
-#     # check 3 lowercase missing
-#     pwchars_inv_3 = string.ascii_uppercase + string.digits
-#     rnd_pw_inv_3 = "".join([random.choice(pwchars_inv_3) for _ in range(8)])
-#     user_registration(rnd_un, rnd_em, rnd_pw_inv_3)
-#     time.sleep(3)
-#     assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
-#                                             "1 uppercase letter, and 1 lowercase letter.")
-#     back_to_form()
-#
-#     # check 4 less than 8 chars
-#     rnd_pw_inv_4 = "".join([random.choice(pwchars) for _ in range(7)])
-#     user_registration(rnd_un, rnd_em, rnd_pw_inv_4)
-#     time.sleep(3)
-#     assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
-#                                             "1 uppercase letter, and 1 lowercase letter.")
-#     back_to_form()
+
+
+def test_reg_1012():
+    #  check 1: digit missing
+    rnd_pw_inv1 = lowercase_part + uppercase_part + special_part
+    user_registration(rnd_un, rnd_em, rnd_pw_inv1)
+    time.sleep(3)
+    assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
+                                            "1 uppercase letter, and 1 lowercase letter.")
+    back_to_form()
+    time.sleep(3)
+
+    # check 2 uppercase missing
+    rnd_pw_inv2 = numeric_part + lowercase_part + special_part
+    user_registration(rnd_un, rnd_em, rnd_pw_inv2)
+    time.sleep(3)
+    assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
+                                            "1 uppercase letter, and 1 lowercase letter.")
+    back_to_form()
+    time.sleep(3)
+
+    # check 3 lowercase missing
+    rnd_pw_inv3 = numeric_part + uppercase_part + special_part
+    user_registration(rnd_un, rnd_em, rnd_pw_inv3)
+    time.sleep(3)
+    assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
+                                            "1 uppercase letter, and 1 lowercase letter.")
+    back_to_form()
+
+    # check 4 less than 8 chars
+    lowercase_part_inv = "".join([random.choice(string.ascii_lowercase) for _ in range(2)])
+    uppercase_part_inv = "".join([random.choice(string.ascii_uppercase) for _ in range(2)])
+    rnd_pw_inv4 = lowercase_part_inv + uppercase_part_inv + numeric_part
+    user_registration(rnd_un, rnd_em, rnd_pw_inv4)
+    time.sleep(3)
+    assert_handling("Registration failed!", "Password must be 8 characters long and include 1 number, "
+                                            "1 uppercase letter, and 1 lowercase letter.")
+    back_to_form()
 
 # CON_TC_1013_REG happy path successful user reg.
 
 
 def test_reg_1013():
     user_registration(rnd_un, rnd_em, rnd_pw)
-    time.sleep(5)
+    time.sleep(2)
     assert_handling("Welcome!", "Your registration was successful!")
     back_to_form()
     user = driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[4]/a")
     assert user.is_displayed()
     assert user.text == rnd_un
-    time.sleep(5)
+    time.sleep(2)
 
     # perform logout
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='app']/nav/div/ul/li[5]/a"))).click()
-    time.sleep(5)
+    time.sleep(3)
 
 
 # CON_TC_1014_REG, Sign-up with account already existing
@@ -189,6 +190,6 @@ def test_reg_1014():
 
 def test_reg_1015():
     back_to_form()
-    user_registration("testella", rnd_em, "Teszt123")
+    user_registration("testella", rnd_em, rnd_pw)
     time.sleep(5)
     assert_handling("Registration failed!", "Username already taken.")
