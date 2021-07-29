@@ -41,7 +41,7 @@ def test_1021_log():
             pass_word.clear()
             e_mail.send_keys(email)
             pass_word.send_keys(password)
-            time.sleep(2)
+            time.sleep(3)
             sign_in_button.click()
 
         def assert_handling(expected_title, expected_text):
@@ -72,19 +72,12 @@ def test_1021_log():
         time.sleep(2)
         back_to_form()
 
-        # missing email
-
-        user_login("", rnd_pw)
-        time.sleep(2)
-        assert_handling("Login failed!", "Email field required.")
-        back_to_form()
-
         # missing password
 
+        time.sleep(3)
         user_login(rnd_em, "")
         time.sleep(3)
         assert_handling("Login failed!", "Password field required.")
-        back_to_form()
 
     finally:
         driver.close()
