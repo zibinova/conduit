@@ -6,6 +6,7 @@ def test_reg_1000():
     from selenium.webdriver.support import expected_conditions as EC
     from webdriver_manager.chrome import ChromeDriverManager
     import time
+    from selenium.common.exceptions import NoSuchElementException
 
     driver = webdriver.Chrome(ChromeDriverManager().install())
     # driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)  # headless mode
@@ -22,7 +23,16 @@ def test_reg_1000():
         cookie_accept_button.click()
 
         try:
-            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "locator")))
+            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "driver.find_element_by_id('cookie-policy-panel')")))
+            not_found = False
+
+        except:
+            not_found = True
+        assert not_found
+
+        driver.refresh()
+        try:
+            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "driver.find_element_by_id('cookie-policy-panel')")))
             not_found = False
 
         except:
