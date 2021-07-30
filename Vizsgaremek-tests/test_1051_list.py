@@ -1,4 +1,4 @@
-#  CON_TC_1051_LIST Data listing
+#  CON_TC_1051_LIST: Data listing
 
 def test_1051_list():
     from selenium import webdriver
@@ -26,17 +26,25 @@ def test_1051_list():
         driver.find_element_by_xpath("//form/fieldset[2]/input").send_keys("Teszt123")
         driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/button').click()
 
-        # listing articles with tag "dolor" from Popular Tags
-        time.sleep(5)
-        dolor_tag = driver.find_element_by_xpath("//*[ @id='app']/div/div[2]/div/div[2]/div/div/a[3]")
-        dolor_tag.click()
+        # listing articles with tag "dolor" from Popular Tags section
+        WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, "//*[ @id='app']/div/div[2]/div/div[2]/div/div/a[3]")))
+        dolor_pop_tag = driver.find_element_by_xpath("//*[ @id='app']/div/div[2]/div/div[2]/div/div/a[3]")
+        dolor_pop_tag.click()
 
         # validation of the list
+        WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, "//*[@id='app']/div/div[2]/div/div[1]/div[1]/ul/li[3]/a")))
+        dolor_feed = driver.find_element_by_xpath("//*[@id='app']/div/div[2]/div/div[1]/div[1]/ul/li[3]/a")
+        assert dolor_feed.is_displayed()
+        assert dolor_feed.text == "dolor"
 
+        dolor_list = driver.find_elements_by_xpath("//div[@class='article-preview']")
+        assert len(dolor_list) == 6
 
-
-
-
+        # checking if all articles has the dolor tag
+        dolor_tags = driver.find_elements_by_xpath("//div[@class='article-preview']/a/div/a[@href='#/tag/dolor']")
+        assert len(dolor_tags) == len(dolor_list)
 
     finally:
         pass
