@@ -73,7 +73,6 @@ def test_1021_log():
         back_to_form()
 
         # missing password
-
         time.sleep(3)
         user_login(rnd_em, "")
         time.sleep(3)
