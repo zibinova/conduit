@@ -1,14 +1,11 @@
-#  CON_TC_1000_policy cookie consent giving check
+#  CON_TC_1000_policy cookie consent giving check, test fails as cookie has been accepted,
+#  panel still appears after reopening the page
+# at manual test working fine. ??
 
 def test_1000_policy():
     from selenium import webdriver
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
     from webdriver_manager.chrome import ChromeDriverManager
     import time
-    from selenium.common.exceptions import NoSuchElementException
-    import pytest
 
     driver = webdriver.Chrome(ChromeDriverManager().install())
     # driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)  # headless mode
@@ -23,11 +20,27 @@ def test_1000_policy():
     time.sleep(2)
     cookie_accept_button = driver.find_element_by_xpath("//div[@class='cookie__bar__buttons']/button[2]")
     cookie_accept_button.click()
-
-    # checking if panel has disappeared:
+    time.sleep(2)
+    # checking if panel has disappeared:This should pass assertion if
+    # none of elements that match your locator were found
+    # or AssertionError if at least 1 found
     assert not len(driver.find_elements_by_id('cookie-policy-panel'))
 
+    driver.close()
 
+    # open browser again
+    import time
+    from selenium import webdriver
+    from webdriver_manager.chrome import ChromeDriverManager
+    # In order for ChromeDriverManager to work you must pip install it in your own environment.
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    URL = "http://localhost:1667"
+    driver.get(URL)
+    time.sleep(3)
+
+    assert not driver.find_element_by_id('cookie-policy-panel').is_displayed()
+
+    driver.close()
 
 
 
