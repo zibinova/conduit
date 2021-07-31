@@ -6,6 +6,7 @@ def test_1045_upload():
     import csv
     import time
     from datetime import date
+    from datetime import datetime
 
     # In order for ChromeDriverManager to work you must pip install it in your own environment.
     driver = webdriver.Chrome(ChromeDriverManager().install())
@@ -51,7 +52,6 @@ def test_1045_upload():
             title = driver.find_element_by_tag_name("h1").text
             user = driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[4]/a")
             author = driver.find_element_by_class_name("author")
-
             edit_article_btn = driver.find_element_by_xpath("//span/a")
             del_article_btn = driver.find_element_by_xpath("//span/button")
             text = driver.find_element_by_xpath("//p").text
@@ -68,6 +68,10 @@ def test_1045_upload():
 
             today = date.today()
             article_date = driver.find_element_by_xpath("//span[@class='date']").text
+            article_date_converted = datetime.strptime(article_date, "%B %d, %Y")
+            date_to_set = datetime.date(article_date_converted)
+
+            assert date_to_set == today
 
 
 
@@ -75,22 +79,3 @@ def test_1045_upload():
 
 
 
-
-# def find_and_clear_by_xpath(xpath):
-#     element = driver.find_element_by_xpath(xpath)
-#     element.clear()
-#     return element
-#
-#
-# publish_button = driver.find_element_by_xpath("//*[@id='app']/div/div/div/div/form/button")
-#
-# with open("new_article.csv", encoding='utf-8') as csv_file:
-#     reader = csv.reader(csv_file, delimiter=',')
-#     next(reader)
-#     for row in reader:
-#         find_and_clear_by_xpath(driver.find_element_by_xpath("//*[@id='app']/div/div/div/div/form/fieldset/fieldset[1]/input").send_keys(row[0]))
-#         find_and_clear_by_xpath(driver.find_element_by_xpath("//*[@id='app']/div/div/div/div/form/fieldset/fieldset[2]/input").send_keys(row[1]))
-#         find_and_clear_by_xpath(driver.find_element_by_xpath("//*[@id='app']/div/div/div/div/form/fieldset/fieldset[3]/textarea").send_keys(row[2]))
-#         find_and_clear_by_xpath(driver.find_elements_by_xpath("//*[@id='app']/div/div/div/div/form/fieldset/fieldset[4]/div/div/ul/li/input")).send_keys(row[3])
-#         time.sleep(2)
-#         # publish_button.click()
