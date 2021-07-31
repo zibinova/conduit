@@ -46,8 +46,9 @@ def test_1045_data_mod():
     assert swal_title.text == "Update successful!"
     ok_button = driver.find_element_by_class_name("swal-button")
     ok_button.click()
+    assert bio.get_attribute("value") == entry
 
     driver.close()
-# az updatelt szoveget lehet-e ellenorizni?
+
 
 
