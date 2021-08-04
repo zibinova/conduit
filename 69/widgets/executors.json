@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://zibinova.github.io/conduit",
+  "buildOrder" : 69,
+  "buildName" : "GitHub Actions Run #1098506435",
+  "buildUrl" : "https://github.com/zibinova/conduit/actions/runs/1098506435",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://zibinova.github.io/conduit/69/"
+} ]
