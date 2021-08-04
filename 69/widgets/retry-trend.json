@@ -7,6 +7,30 @@
     "retry" : 0
   }
 }, {
+  "buildOrder" : 71,
+  "reportUrl" : "https://zibinova.github.io/conduit/71/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 0,
+    "retry" : 0
+  }
+}, {
+  "buildOrder" : 70,
+  "reportUrl" : "https://zibinova.github.io/conduit/70/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 0,
+    "retry" : 0
+  }
+}, {
+  "buildOrder" : 69,
+  "reportUrl" : "https://zibinova.github.io/conduit/69/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 0,
+    "retry" : 0
+  }
+}, {
   "data" : {
     "run" : 0,
     "retry" : 0
