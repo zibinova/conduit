@@ -2,13 +2,15 @@
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 import time
 
+options = Options()
+options.headless = True
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
-# driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)  # headless mode
+# driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)  # headless mode
 
-# options = Options()
 # options.add_argument('--headless')
 # options.add_argument('--disable-gpu')
 
