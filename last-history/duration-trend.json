@@ -1,4 +1,9 @@
 [ {
+  "buildOrder" : 2,
+  "reportUrl" : "https://zibinova.github.io/conduit/2/",
+  "reportName" : "Allure Report with history",
+  "data" : { }
+}, {
   "buildOrder" : 73,
   "reportUrl" : "https://zibinova.github.io/conduit/73/",
   "reportName" : "Allure Report with history",
