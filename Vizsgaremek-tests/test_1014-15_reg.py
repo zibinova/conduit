@@ -1,5 +1,5 @@
 # CON_TC_1014_REG, 1015_REG Sign-up with account/username already existing
-
+# 1015 expected to fail, app allows using multiple username
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
