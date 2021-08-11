@@ -1,6 +1,6 @@
-#  CON_TC_1040_NEW_DATA_ENT_DEL: new data entry and deletion
+#  CON_TC_1040_ENTRY_DEL: new data entry and deletion
 
-def test_1040_new_data_ent():
+def test_1040_entry_del():
     from selenium import webdriver
     from selenium.webdriver.common.by import By
     from selenium.webdriver.support.ui import WebDriverWait
@@ -53,6 +53,6 @@ def test_1040_new_data_ent():
     trash_icon.click()
     time.sleep(5)
 
-    assert not driver.find_element_by_xpath("//div[@class='card']").text == comment
+    assert not len(driver.find_elements_by_xpath("//div[@class='card']"))
 
     driver.close()
