@@ -1,0 +1,213 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "vizsgaremek_tests",
+    "children" : [ {
+      "name" : "test_1000_policy",
+      "children" : [ {
+        "name" : "test_1000_policy",
+        "uid" : "8ad09ba81a84fadf",
+        "parentUid" : "96d32e8ed2deffb370cc89d28886ed73",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628688011559,
+          "stop" : 1628688011625,
+          "duration" : 66
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "96d32e8ed2deffb370cc89d28886ed73"
+    }, {
+      "name" : "test_1010_13_reg",
+      "children" : [ {
+        "name" : "test_1010_13reg",
+        "uid" : "7d380723638de248",
+        "parentUid" : "97623e6e481b0eb4589f70c6ac6e2530",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628688011651,
+          "stop" : 1628688011652,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "97623e6e481b0eb4589f70c6ac6e2530"
+    }, {
+      "name" : "test_1011_12_reg",
+      "children" : [ {
+        "name" : "test_1011_reg",
+        "uid" : "7021ca4b9d70899c",
+        "parentUid" : "1198b7b8d11f22d61f9ef3cf2fbd40af",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628688011656,
+          "stop" : 1628688011656,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1198b7b8d11f22d61f9ef3cf2fbd40af"
+    }, {
+      "name" : "test_1014_15_reg",
+      "children" : [ {
+        "name" : "test_reg_1014_15",
+        "uid" : "97558992906ca38",
+        "parentUid" : "39d216b78d9b3359399bfd6ce0b0cae9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628688011660,
+          "stop" : 1628688011660,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "39d216b78d9b3359399bfd6ce0b0cae9"
+    }, {
+      "name" : "test_1020_log",
+      "children" : [ {
+        "name" : "test_1020_log",
+        "uid" : "dc3a7811ff3439a0",
+        "parentUid" : "17e4fab0a71bf1ea1dfdae996e89c558",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628688011664,
+          "stop" : 1628688011664,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "17e4fab0a71bf1ea1dfdae996e89c558"
+    }, {
+      "name" : "test_1021_log",
+      "children" : [ {
+        "name" : "test_1021_log",
+        "uid" : "8f795d6e01ddd097",
+        "parentUid" : "e83446d2f8cc234e2b55bb2c5432796b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628688011667,
+          "stop" : 1628688011668,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e83446d2f8cc234e2b55bb2c5432796b"
+    }, {
+      "name" : "test_1023_log",
+      "children" : [ {
+        "name" : "test_1023_log",
+        "uid" : "b2b06fcdf3a9966f",
+        "parentUid" : "a802619713cf541ca7ebf76d14aeb69b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628688011672,
+          "stop" : 1628688011672,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a802619713cf541ca7ebf76d14aeb69b"
+    }, {
+      "name" : "test_1024_logout",
+      "children" : [ {
+        "name" : "test_1024_logout",
+        "uid" : "a12d26ac86a83d4a",
+        "parentUid" : "829625efd0b5ff00bcf796655cc4d6aa",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628688011675,
+          "stop" : 1628688011675,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "829625efd0b5ff00bcf796655cc4d6aa"
+    }, {
+      "name" : "test_1040_entry_del",
+      "children" : [ {
+        "name" : "test_1040_new_data_ent",
+        "uid" : "2b8a107a3f1f6ed0",
+        "parentUid" : "e6f646df2bc0ec7c5c4830ef233a8f85",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628688011677,
+          "stop" : 1628688011678,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e6f646df2bc0ec7c5c4830ef233a8f85"
+    }, {
+      "name" : "test_1041_upload",
+      "children" : [ {
+        "name" : "test_1045_upload",
+        "uid" : "9d784976c08d8e3a",
+        "parentUid" : "e2761c2d1989ac8e0caddc5cd08a85c3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628688011690,
+          "stop" : 1628688011690,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e2761c2d1989ac8e0caddc5cd08a85c3"
+    }, {
+      "name" : "test_1045_modif",
+      "children" : [ {
+        "name" : "test_1045_data_mod",
+        "uid" : "bbaae39808429aa1",
+        "parentUid" : "f174b8575137cd6a32b88577715ef30a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628688011694,
+          "stop" : 1628688011694,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f174b8575137cd6a32b88577715ef30a"
+    }, {
+      "name" : "test_1061_list",
+      "children" : [ {
+        "name" : "test_1051_list",
+        "uid" : "578ce565141e7fa8",
+        "parentUid" : "b32d55310dfd76861921423212f06ae5",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628688011697,
+          "stop" : 1628688011697,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b32d55310dfd76861921423212f06ae5"
+    } ],
+    "uid" : "2537d2d7f79a2c7bc0ee7dc58fe3b4a7"
+  } ],
+  "name" : "suites"
+}
