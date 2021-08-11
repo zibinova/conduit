@@ -1,0 +1,110 @@
+{
+  "uid" : "add5fbb83a2ad70c",
+  "name" : "test_1041_upload",
+  "fullName" : "vizsgaremek_tests.test_1041_upload#test_1041_upload",
+  "historyId" : "2b107ec223bf494035e5ba2851aa1297",
+  "time" : {
+    "start" : 1628696912628,
+    "stop" : 1628696934779,
+    "duration" : 22151
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert (11 + 5) == 5\n +  where 11 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"e4ca0987-37b8-...belement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"608203c7-c847-4d15-b515-8eaa098c1023\")>, ...])\n +  and   5 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"02890a83-5137-...te.webelement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"4c62fd81-3211-440c-b7a9-8d88fd55fa05\")>])",
+  "statusTrace" : "def test_1041_upload():\n    \n        from selenium import webdriver\n        from webdriver_manager.chrome import ChromeDriverManager\n        from selenium.webdriver.chrome.options import Options\n        import csv\n        import time\n        from datetime import date\n        from datetime import datetime\n    \n        options = Options()\n        options.headless = True\n        # In order for ChromeDriverManager to work you must pip install it in your own environment.\n    \n        # driver = webdriver.Chrome(ChromeDriverManager().install())\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)  # headless mode\n    \n        # options.add_argument('--headless')\n        # options.add_argument('--disable-gpu')\n    \n        URL = \"http://localhost:1667\"\n        driver.get(URL)\n    \n        # cookie handling\n        cookie_accept_button = driver.find_element_by_xpath(\"//div[@class='cookie__bar__buttons']/button[2]\")\n        cookie_accept_button.click()\n    \n        # login to app\n        driver.find_element_by_xpath(\"//*[@id='app']/nav/div/ul/li[2]/a\").click()\n        driver.find_element_by_xpath(\"//form/fieldset[1]/input\").send_keys(\"testella@gmail.com\")\n        driver.find_element_by_xpath(\"//form/fieldset[2]/input\").send_keys(\"Teszt123\")\n        driver.find_element_by_xpath('//*[@id=\"app\"]/div/div/div/div/form/button').click()\n        time.sleep(2)\n    \n        # check current number of \"My articles\"\n    \n        user = driver.find_element_by_xpath(\"//*[@id='app']/nav/div/ul/li[4]/a\")\n        user.click()\n        article_list = driver.find_elements_by_class_name(\"article-preview\")\n        print(len(article_list))\n    \n        def generate_article():\n            new_article_link = driver.find_element_by_xpath(\"//*[@id='app']/nav/div/ul/li[2]/a\")\n            new_article_link.click()\n            time.sleep(1)\n            article_title = driver.find_element_by_xpath(\"//*[@id='app']//fieldset[1]/input\")\n            article_about = driver.find_element_by_xpath(\"//*[@id='app']//fieldset[2]/input\")\n            article_text = driver.find_element_by_xpath(\"//*[@id='app']//fieldset[3]/textarea\")\n            article_tag = driver.find_element_by_xpath(\"//*[@id='app']//fieldset[4]//input\")\n            publish_button = driver.find_element_by_xpath(\"//*[@id='app']//form/button\")\n    \n            article_title.send_keys(row[0])\n            article_about.send_keys(row[1])\n            article_text.send_keys(row[2])\n            article_tag.send_keys(row[3])\n            time.sleep(1)\n            publish_button.click()\n            time.sleep(1)\n    \n        with open(\"new_article.csv\", encoding='utf-8') as csv_file:\n            reader = csv.reader(csv_file, delimiter=',')\n            next(reader)\n            for row in reader:\n    \n                generate_article()\n    \n                title = driver.find_element_by_tag_name(\"h1\").text\n                user = driver.find_element_by_xpath(\"//*[@id='app']/nav/div/ul/li[4]/a\")\n                author = driver.find_element_by_class_name(\"author\")\n                edit_article_btn = driver.find_element_by_xpath(\"//span/a\")\n                del_article_btn = driver.find_element_by_xpath(\"//span/button\")\n                text = driver.find_element_by_xpath(\"//p\").text\n                tag = driver.find_element_by_xpath(\"//div[@class='tag-list']/a\").text\n    \n                assert title == row[0]\n                assert driver.current_url == \"http://localhost:1667/#/articles/\" + title.lower()\n                assert author.is_displayed()\n                assert author.text == user.text\n                assert edit_article_btn.is_displayed() and edit_article_btn.is_enabled()\n                assert del_article_btn.is_displayed() and del_article_btn.is_enabled()\n                assert text == row[2]\n                assert tag == row[3]\n    \n                # date of creation validity\n    \n                today = date.today()\n                article_date = driver.find_element_by_xpath(\"//span[@class='date']\").text\n                article_date_converted = datetime.strptime(article_date, \"%B %d, %Y\")\n                date_to_set = datetime.date(article_date_converted)\n    \n                assert date_to_set == today\n    \n        # check if newly created blogs have been added to \"My articles\"\n        # considering that pagination is not working correctly, all articles would appear on page 1\n    \n        user.click()\n        time.sleep(1)\n        assert driver.current_url == \"http://localhost:1667/#/@\" + user.text + \"/\"\n    \n        # determine number of rows in csv\n    \n        file = open(\"new_article.csv\")\n        reader = csv.reader(file)\n        next(reader)\n        rows = len(list(reader))\n    \n        # check the current article numbers:\n        new_article_list = driver.find_elements_by_class_name(\"article-preview\")\n>       assert (len(article_list) + rows) == len(new_article_list)\nE       assert (11 + 5) == 5\nE        +  where 11 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"e4ca0987-37b8-...belement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"608203c7-c847-4d15-b515-8eaa098c1023\")>, ...])\nE        +  and   5 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"02890a83-5137-...te.webelement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"4c62fd81-3211-440c-b7a9-8d88fd55fa05\")>])\n\nvizsgaremek_tests/test_1041_upload.py:111: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert (11 + 5) == 5\n +  where 11 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"e4ca0987-37b8-...belement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"608203c7-c847-4d15-b515-8eaa098c1023\")>, ...])\n +  and   5 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"02890a83-5137-...te.webelement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"4c62fd81-3211-440c-b7a9-8d88fd55fa05\")>])",
+    "statusTrace" : "def test_1041_upload():\n    \n        from selenium import webdriver\n        from webdriver_manager.chrome import ChromeDriverManager\n        from selenium.webdriver.chrome.options import Options\n        import csv\n        import time\n        from datetime import date\n        from datetime import datetime\n    \n        options = Options()\n        options.headless = True\n        # In order for ChromeDriverManager to work you must pip install it in your own environment.\n    \n        # driver = webdriver.Chrome(ChromeDriverManager().install())\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)  # headless mode\n    \n        # options.add_argument('--headless')\n        # options.add_argument('--disable-gpu')\n    \n        URL = \"http://localhost:1667\"\n        driver.get(URL)\n    \n        # cookie handling\n        cookie_accept_button = driver.find_element_by_xpath(\"//div[@class='cookie__bar__buttons']/button[2]\")\n        cookie_accept_button.click()\n    \n        # login to app\n        driver.find_element_by_xpath(\"//*[@id='app']/nav/div/ul/li[2]/a\").click()\n        driver.find_element_by_xpath(\"//form/fieldset[1]/input\").send_keys(\"testella@gmail.com\")\n        driver.find_element_by_xpath(\"//form/fieldset[2]/input\").send_keys(\"Teszt123\")\n        driver.find_element_by_xpath('//*[@id=\"app\"]/div/div/div/div/form/button').click()\n        time.sleep(2)\n    \n        # check current number of \"My articles\"\n    \n        user = driver.find_element_by_xpath(\"//*[@id='app']/nav/div/ul/li[4]/a\")\n        user.click()\n        article_list = driver.find_elements_by_class_name(\"article-preview\")\n        print(len(article_list))\n    \n        def generate_article():\n            new_article_link = driver.find_element_by_xpath(\"//*[@id='app']/nav/div/ul/li[2]/a\")\n            new_article_link.click()\n            time.sleep(1)\n            article_title = driver.find_element_by_xpath(\"//*[@id='app']//fieldset[1]/input\")\n            article_about = driver.find_element_by_xpath(\"//*[@id='app']//fieldset[2]/input\")\n            article_text = driver.find_element_by_xpath(\"//*[@id='app']//fieldset[3]/textarea\")\n            article_tag = driver.find_element_by_xpath(\"//*[@id='app']//fieldset[4]//input\")\n            publish_button = driver.find_element_by_xpath(\"//*[@id='app']//form/button\")\n    \n            article_title.send_keys(row[0])\n            article_about.send_keys(row[1])\n            article_text.send_keys(row[2])\n            article_tag.send_keys(row[3])\n            time.sleep(1)\n            publish_button.click()\n            time.sleep(1)\n    \n        with open(\"new_article.csv\", encoding='utf-8') as csv_file:\n            reader = csv.reader(csv_file, delimiter=',')\n            next(reader)\n            for row in reader:\n    \n                generate_article()\n    \n                title = driver.find_element_by_tag_name(\"h1\").text\n                user = driver.find_element_by_xpath(\"//*[@id='app']/nav/div/ul/li[4]/a\")\n                author = driver.find_element_by_class_name(\"author\")\n                edit_article_btn = driver.find_element_by_xpath(\"//span/a\")\n                del_article_btn = driver.find_element_by_xpath(\"//span/button\")\n                text = driver.find_element_by_xpath(\"//p\").text\n                tag = driver.find_element_by_xpath(\"//div[@class='tag-list']/a\").text\n    \n                assert title == row[0]\n                assert driver.current_url == \"http://localhost:1667/#/articles/\" + title.lower()\n                assert author.is_displayed()\n                assert author.text == user.text\n                assert edit_article_btn.is_displayed() and edit_article_btn.is_enabled()\n                assert del_article_btn.is_displayed() and del_article_btn.is_enabled()\n                assert text == row[2]\n                assert tag == row[3]\n    \n                # date of creation validity\n    \n                today = date.today()\n                article_date = driver.find_element_by_xpath(\"//span[@class='date']\").text\n                article_date_converted = datetime.strptime(article_date, \"%B %d, %Y\")\n                date_to_set = datetime.date(article_date_converted)\n    \n                assert date_to_set == today\n    \n        # check if newly created blogs have been added to \"My articles\"\n        # considering that pagination is not working correctly, all articles would appear on page 1\n    \n        user.click()\n        time.sleep(1)\n        assert driver.current_url == \"http://localhost:1667/#/@\" + user.text + \"/\"\n    \n        # determine number of rows in csv\n    \n        file = open(\"new_article.csv\")\n        reader = csv.reader(file)\n        next(reader)\n        rows = len(list(reader))\n    \n        # check the current article numbers:\n        new_article_list = driver.find_elements_by_class_name(\"article-preview\")\n>       assert (len(article_list) + rows) == len(new_article_list)\nE       assert (11 + 5) == 5\nE        +  where 11 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"e4ca0987-37b8-...belement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"608203c7-c847-4d15-b515-8eaa098c1023\")>, ...])\nE        +  and   5 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"02890a83-5137-...te.webelement.WebElement (session=\"90bb0b0d3ef9f72b74c7bfab1974976f\", element=\"4c62fd81-3211-440c-b7a9-8d88fd55fa05\")>])\n\nvizsgaremek_tests/test_1041_upload.py:111: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "ae783edca16fe38d",
+      "name" : "log",
+      "source" : "ae783edca16fe38d.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "7f0f9f717c359d58",
+      "name" : "stdout",
+      "source" : "7f0f9f717c359d58.txt",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "687ef4405fabbdb4",
+      "name" : "stderr",
+      "source" : "687ef4405fabbdb4.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "vizsgaremek_tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1041_upload"
+  }, {
+    "name" : "host",
+    "value" : "fv-az36-389"
+  }, {
+    "name" : "thread",
+    "value" : "3846-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "vizsgaremek_tests.test_1041_upload"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "512d424287cfb3f5",
+        "reportUrl" : "https://zibinova.github.io/conduit/78//#testresult/512d424287cfb3f5",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert (11 + 5) == 5\n +  where 11 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"9f1fbeaa6048c471e694723a4cb8c70c\", element=\"3f049e46-e7fa-...belement.WebElement (session=\"9f1fbeaa6048c471e694723a4cb8c70c\", element=\"d8c44f6f-cec6-48df-a835-ed757151130f\")>, ...])\n +  and   5 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"9f1fbeaa6048c471e694723a4cb8c70c\", element=\"88fb8c54-98d9-...te.webelement.WebElement (session=\"9f1fbeaa6048c471e694723a4cb8c70c\", element=\"a001a515-65a1-4849-b5ba-c11757649b00\")>])",
+        "time" : {
+          "start" : 1628696832070,
+          "stop" : 1628696854147,
+          "duration" : 22077
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "add5fbb83a2ad70c.json",
+  "parameterValues" : [ ]
+}
