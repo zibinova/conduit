@@ -1,0 +1,121 @@
+[ {
+  "uid" : "b2d86dc7a53324f",
+  "name" : "test_1011_reg",
+  "time" : {
+    "start" : 1628689858351,
+    "stop" : 1628689938077,
+    "duration" : 79726
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4f69e182ff10e91b",
+  "name" : "test_1045_data_mod",
+  "time" : {
+    "start" : 1628690029044,
+    "stop" : 1628690039344,
+    "duration" : 10300
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a4180ff2e6c69173",
+  "name" : "test_1010_13reg",
+  "time" : {
+    "start" : 1628689819091,
+    "stop" : 1628689858347,
+    "duration" : 39256
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bb2fccec22d92004",
+  "name" : "test_1040_new_data_ent",
+  "time" : {
+    "start" : 1628689995584,
+    "stop" : 1628690006116,
+    "duration" : 10532
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "d2046c6a3bcc7e1c",
+  "name" : "test_1045_upload",
+  "time" : {
+    "start" : 1628690006335,
+    "stop" : 1628690029036,
+    "duration" : 22701
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "9f31cfdba7175c34",
+  "name" : "test_1024_logout",
+  "time" : {
+    "start" : 1628689987541,
+    "stop" : 1628689995581,
+    "duration" : 8040
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dd0da9d0d15a00ef",
+  "name" : "test_reg_1014_15",
+  "time" : {
+    "start" : 1628689938080,
+    "stop" : 1628689951130,
+    "duration" : 13050
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3e04069b119ad0ca",
+  "name" : "test_1023_log",
+  "time" : {
+    "start" : 1628689979502,
+    "stop" : 1628689987537,
+    "duration" : 8035
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cc1a9812e6d11684",
+  "name" : "test_1021_log",
+  "time" : {
+    "start" : 1628689961253,
+    "stop" : 1628689979491,
+    "duration" : 18238
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a313abd42df43d1",
+  "name" : "test_1051_list",
+  "time" : {
+    "start" : 1628690039347,
+    "stop" : 1628690042070,
+    "duration" : 2723
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fcc88af48ba42fef",
+  "name" : "test_1000_policy",
+  "time" : {
+    "start" : 1628689798849,
+    "stop" : 1628689819056,
+    "duration" : 20207
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3a20eba14433da34",
+  "name" : "test_1020_log",
+  "time" : {
+    "start" : 1628689951138,
+    "stop" : 1628689961250,
+    "duration" : 10112
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
