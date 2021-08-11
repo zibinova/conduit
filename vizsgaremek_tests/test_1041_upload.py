@@ -1,6 +1,6 @@
 #  CON_TC_1041_UPLOAD, Repeated and sequenced data upload from data source
 
-def test_1045_upload():
+def test_1041_upload():
 
     from selenium import webdriver
     from webdriver_manager.chrome import ChromeDriverManager
@@ -108,7 +108,7 @@ def test_1045_upload():
 
     # check the current article numbers:
     new_article_list = driver.find_elements_by_class_name("article-preview")
-    assert len(article_list) + rows == len(new_article_list)
+    assert (len(article_list) + rows) == len(new_article_list)
 
     # itt szeretnem osszehasonlítani a csv title listat a selected /vagyis ujonnan letrehozott/
     # article title listaval: de még küzdök
