@@ -111,19 +111,19 @@ def test_1041_upload():
     assert (len(article_list) + rows) == len(new_article_list)
 
     # itt szeretnem osszehasonlítani a csv title listat a selected /vagyis ujonnan letrehozott/
-    # article title listaval: de még küzdök
+    # article title listaval: de sántít
 
-    # with open("new_article.csv") as csv_file:
-    #     reader = csv.reader(csv_file, delimiter=',')
-    #     next(reader)
-    #     for row in reader:
-    #         exp_titles = ("".join(row[0]))
-    #         print(exp_titles)
-    #
-    # titles = driver.find_elements_by_tag_name("h1")
-    # selected_titles = titles[-rows:]
-    # print(selected_titles)
-    # assert exp_titles == selected_titles
+    with open("new_article.csv") as csv_file:
+        reader = csv.reader(csv_file, delimiter=',')
+        next(reader)
+        for row in reader:
+            exp_titles = ("".join(row[0]))
+            print(exp_titles)
+
+    titles = driver.find_elements_by_tag_name("h1")
+    selected_titles = titles[-rows:]
+    print(selected_titles)
+    assert exp_titles == selected_titles
 
 
 
