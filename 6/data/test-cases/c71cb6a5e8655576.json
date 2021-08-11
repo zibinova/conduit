@@ -1,0 +1,133 @@
+{
+  "uid" : "c71cb6a5e8655576",
+  "name" : "test_1023_log",
+  "fullName" : "vizsgaremek_tests.test_1023_log#test_1023_log",
+  "historyId" : "ef9422a7615e17943047e8c36b20f065",
+  "time" : {
+    "start" : 1628696744186,
+    "stop" : 1628696752219,
+    "duration" : 8033
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "1cad5ae7d5f2b3f3",
+      "name" : "log",
+      "source" : "1cad5ae7d5f2b3f3.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "cccf781a80d4e18a",
+      "name" : "stderr",
+      "source" : "cccf781a80d4e18a.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "vizsgaremek_tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1023_log"
+  }, {
+    "name" : "host",
+    "value" : "fv-az33-581"
+  }, {
+    "name" : "thread",
+    "value" : "3962-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "vizsgaremek_tests.test_1023_log"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 2,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "759036cfad5f6b86",
+        "reportUrl" : "https://zibinova.github.io/conduit/77//#testresult/759036cfad5f6b86",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628696731395,
+          "stop" : 1628696739501,
+          "duration" : 8106
+        }
+      }, {
+        "uid" : "67a8e8114e8e66ba",
+        "reportUrl" : "https://zibinova.github.io/conduit/5//#testresult/67a8e8114e8e66ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628689987398,
+          "stop" : 1628689995560,
+          "duration" : 8162
+        }
+      }, {
+        "uid" : "3e04069b119ad0ca",
+        "reportUrl" : "https://zibinova.github.io/conduit/76//#testresult/3e04069b119ad0ca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628689979502,
+          "stop" : 1628689987537,
+          "duration" : 8035
+        }
+      }, {
+        "uid" : "b2b06fcdf3a9966f",
+        "reportUrl" : "https://zibinova.github.io/conduit/4//#testresult/b2b06fcdf3a9966f",
+        "status" : "broken",
+        "statusDetails" : "ModuleNotFoundError: No module named 'webdriver_manager'",
+        "time" : {
+          "start" : 1628688011672,
+          "stop" : 1628688011672,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "b70ff2d3cdeb3c79",
+        "reportUrl" : "https://zibinova.github.io/conduit/75//#testresult/b70ff2d3cdeb3c79",
+        "status" : "broken",
+        "statusDetails" : "ModuleNotFoundError: No module named 'webdriver_manager'",
+        "time" : {
+          "start" : 1628687995430,
+          "stop" : 1628687995430,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c71cb6a5e8655576.json",
+  "parameterValues" : [ ]
+}
