@@ -1,0 +1,150 @@
+{
+  "uid" : "1fedb3981129c18e",
+  "name" : "test_1011_reg",
+  "fullName" : "vizsgaremek_tests.test_1011_12_reg#test_1011_reg",
+  "historyId" : "bb1a2f285f96e9a424e98f3d4f1bd379",
+  "time" : {
+    "start" : 1628696750219,
+    "stop" : 1628696765132,
+    "duration" : 14913
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".swal-text\"}\n  (Session info: headless chrome=92.0.4515.131)",
+  "statusTrace" : "def test_1011_reg():\n        from selenium import webdriver\n        from selenium.webdriver.common.by import By\n        from selenium.webdriver.support.ui import WebDriverWait\n        from selenium.webdriver.support import expected_conditions as EC\n        from webdriver_manager.chrome import ChromeDriverManager\n        from selenium.webdriver.chrome.options import Options\n        import time\n        import random\n        import string\n    \n        options = Options()\n        options.headless = True\n    \n        # driver = webdriver.Chrome(ChromeDriverManager().install())\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)  # headless mode\n    \n        # options.add_argument('--headless')\n        # options.add_argument('--disable-gpu')\n    \n        driver.get(\"http://localhost:1667\")\n    \n        # giving cookie consent\n        cookie_accept_button = driver.find_element_by_xpath(\"//div[@class='cookie__bar__buttons']/button[2]\")\n        cookie_accept_button.click()\n    \n        def user_registration(username, email, password):\n            user_name = driver.find_element_by_xpath(\"//form/fieldset[1]/input\")\n            e_mail = driver.find_element_by_xpath(\"//form/fieldset[2]/input\")\n            pass_word = driver.find_element_by_xpath(\"//form/fieldset[3]/input\")\n            sign_up_button = driver.find_element_by_xpath('//form/button')\n    \n            user_name.send_keys(username)\n            e_mail.send_keys(email)\n            pass_word.send_keys(password)\n            time.sleep(3)\n            sign_up_button.click()\n    \n        def assert_handling(expected_title, expected_text):\n    \n            WebDriverWait(driver, 10).until(\n                EC.visibility_of_element_located((By.XPATH, \"//div[@class='swal-title']\")))\n    \n            swal_title = driver.find_element_by_xpath(\"//div[@class='swal-title']\").text\n            time.sleep(2)\n            swal_text = driver.find_element_by_class_name(\"swal-text\").text\n            assert (swal_title == expected_title and swal_text == expected_text)\n    \n        def back_to_form():  # acknowledging error/getting sign up form back\n            time.sleep(2)\n            ok_button = driver.find_element_by_class_name(\"swal-button\")\n            ok_button.click()\n    \n        # generating random test data\n    \n        numeric_part = \"\".join([random.choice(string.digits) for _ in range(2)])\n        lowercase_part = \"\".join([random.choice(string.ascii_lowercase) for _ in range(4)])\n        uppercase_part = \"\".join([random.choice(string.ascii_uppercase) for _ in range(4)])\n        special_part = \"\".join([random.choice(string.punctuation) for _ in range(2)])\n        rnd_un = \"\".join([random.choice(string.ascii_lowercase) for _ in range(5)])\n        rnd_em = rnd_un + \"@\" + lowercase_part + \".com\"\n        rnd_pw = numeric_part + lowercase_part + uppercase_part + special_part\n    \n        # getting sign-up form\n    \n        sign_up_link = driver.find_element_by_xpath(\"//ul/li[3]/a\")\n        sign_up_link.click()\n        time.sleep(3)\n    \n        # check email without domain\n        rnd_em_inv_1 = rnd_un + \"@\" + rnd_un\n        user_registration(rnd_un, rnd_em_inv_1, rnd_pw)\n        time.sleep(5)\n>       assert_handling(\"Registration failed!\", \"Email must be a valid email.\")\n\nvizsgaremek_tests/test_1011_12_reg.py:76: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nvizsgaremek_tests/test_1011_12_reg.py:48: in assert_handling\n    swal_text = driver.find_element_by_class_name(\"swal-text\").text\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:564: in find_element_by_class_name\n    return self.find_element(by=By.CLASS_NAME, value=name)\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:976: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:321: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f2be1936070>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such element\",\"message\":\"no such element: Unable to locate element: {\\...wn>\\\\n#15 0x55d2c4645e58 \\\\u003Cunknown>\\\\n#16 0x55d2c465fdfd \\\\u003Cunknown>\\\\n#17 0x7f354ea20609 start_thread\\\\n\"}}'}\n\n    def check_response(self, response):\n        \"\"\"\n        Checks that a JSON response from the WebDriver does not have an error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get('status', None)\n        if status is None or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get('value', None)\n            if value_json and isinstance(value_json, basestring):\n                import json\n                try:\n                    value = json.loads(value_json)\n                    if len(value.keys()) == 1:\n                        value = value['value']\n                    status = value.get('error', None)\n                    if status is None:\n                        status = value[\"status\"]\n                        message = value[\"value\"]\n                        if not isinstance(message, basestring):\n                            value = message\n                            message = message.get('message')\n                    else:\n                        message = value.get('message', None)\n                except ValueError:\n                    pass\n    \n        exception_class = ErrorInResponseException\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif status in ErrorCode.INVALID_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if value == '' or value is None:\n            value = response['value']\n        if isinstance(value, basestring):\n            if exception_class == ErrorInResponseException:\n                raise exception_class(response, value)\n            raise exception_class(value)\n        if message == \"\" and 'message' in value:\n            message = value['message']\n    \n        screen = None\n        if 'screen' in value:\n            screen = value['screen']\n    \n        stacktrace = None\n        if 'stackTrace' in value and value['stackTrace']:\n            stacktrace = []\n            try:\n                for frame in value['stackTrace']:\n                    line = self._value_or_default(frame, 'lineNumber', '')\n                    file = self._value_or_default(frame, 'fileName', '<anonymous>')\n                    if line:\n                        file = \"%s:%s\" % (file, line)\n                    meth = self._value_or_default(frame, 'methodName', '<anonymous>')\n                    if 'className' in frame:\n                        meth = \"%s.%s\" % (frame['className'], meth)\n                    msg = \"    at %s (%s)\"\n                    msg = msg % (meth, file)\n                    stacktrace.append(msg)\n            except TypeError:\n                pass\n        if exception_class == ErrorInResponseException:\n            raise exception_class(response, message)\n        elif exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if 'data' in value:\n                alert_text = value['data'].get('text')\n            elif 'alert' in value:\n                alert_text = value['alert'].get('text')\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".swal-text\"}\nE         (Session info: headless chrome=92.0.4515.131)\n\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py:242: NoSuchElementException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".swal-text\"}\n  (Session info: headless chrome=92.0.4515.131)",
+    "statusTrace" : "def test_1011_reg():\n        from selenium import webdriver\n        from selenium.webdriver.common.by import By\n        from selenium.webdriver.support.ui import WebDriverWait\n        from selenium.webdriver.support import expected_conditions as EC\n        from webdriver_manager.chrome import ChromeDriverManager\n        from selenium.webdriver.chrome.options import Options\n        import time\n        import random\n        import string\n    \n        options = Options()\n        options.headless = True\n    \n        # driver = webdriver.Chrome(ChromeDriverManager().install())\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)  # headless mode\n    \n        # options.add_argument('--headless')\n        # options.add_argument('--disable-gpu')\n    \n        driver.get(\"http://localhost:1667\")\n    \n        # giving cookie consent\n        cookie_accept_button = driver.find_element_by_xpath(\"//div[@class='cookie__bar__buttons']/button[2]\")\n        cookie_accept_button.click()\n    \n        def user_registration(username, email, password):\n            user_name = driver.find_element_by_xpath(\"//form/fieldset[1]/input\")\n            e_mail = driver.find_element_by_xpath(\"//form/fieldset[2]/input\")\n            pass_word = driver.find_element_by_xpath(\"//form/fieldset[3]/input\")\n            sign_up_button = driver.find_element_by_xpath('//form/button')\n    \n            user_name.send_keys(username)\n            e_mail.send_keys(email)\n            pass_word.send_keys(password)\n            time.sleep(3)\n            sign_up_button.click()\n    \n        def assert_handling(expected_title, expected_text):\n    \n            WebDriverWait(driver, 10).until(\n                EC.visibility_of_element_located((By.XPATH, \"//div[@class='swal-title']\")))\n    \n            swal_title = driver.find_element_by_xpath(\"//div[@class='swal-title']\").text\n            time.sleep(2)\n            swal_text = driver.find_element_by_class_name(\"swal-text\").text\n            assert (swal_title == expected_title and swal_text == expected_text)\n    \n        def back_to_form():  # acknowledging error/getting sign up form back\n            time.sleep(2)\n            ok_button = driver.find_element_by_class_name(\"swal-button\")\n            ok_button.click()\n    \n        # generating random test data\n    \n        numeric_part = \"\".join([random.choice(string.digits) for _ in range(2)])\n        lowercase_part = \"\".join([random.choice(string.ascii_lowercase) for _ in range(4)])\n        uppercase_part = \"\".join([random.choice(string.ascii_uppercase) for _ in range(4)])\n        special_part = \"\".join([random.choice(string.punctuation) for _ in range(2)])\n        rnd_un = \"\".join([random.choice(string.ascii_lowercase) for _ in range(5)])\n        rnd_em = rnd_un + \"@\" + lowercase_part + \".com\"\n        rnd_pw = numeric_part + lowercase_part + uppercase_part + special_part\n    \n        # getting sign-up form\n    \n        sign_up_link = driver.find_element_by_xpath(\"//ul/li[3]/a\")\n        sign_up_link.click()\n        time.sleep(3)\n    \n        # check email without domain\n        rnd_em_inv_1 = rnd_un + \"@\" + rnd_un\n        user_registration(rnd_un, rnd_em_inv_1, rnd_pw)\n        time.sleep(5)\n>       assert_handling(\"Registration failed!\", \"Email must be a valid email.\")\n\nvizsgaremek_tests/test_1011_12_reg.py:76: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nvizsgaremek_tests/test_1011_12_reg.py:48: in assert_handling\n    swal_text = driver.find_element_by_class_name(\"swal-text\").text\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:564: in find_element_by_class_name\n    return self.find_element(by=By.CLASS_NAME, value=name)\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:976: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:321: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f2be1936070>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such element\",\"message\":\"no such element: Unable to locate element: {\\...wn>\\\\n#15 0x55d2c4645e58 \\\\u003Cunknown>\\\\n#16 0x55d2c465fdfd \\\\u003Cunknown>\\\\n#17 0x7f354ea20609 start_thread\\\\n\"}}'}\n\n    def check_response(self, response):\n        \"\"\"\n        Checks that a JSON response from the WebDriver does not have an error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get('status', None)\n        if status is None or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get('value', None)\n            if value_json and isinstance(value_json, basestring):\n                import json\n                try:\n                    value = json.loads(value_json)\n                    if len(value.keys()) == 1:\n                        value = value['value']\n                    status = value.get('error', None)\n                    if status is None:\n                        status = value[\"status\"]\n                        message = value[\"value\"]\n                        if not isinstance(message, basestring):\n                            value = message\n                            message = message.get('message')\n                    else:\n                        message = value.get('message', None)\n                except ValueError:\n                    pass\n    \n        exception_class = ErrorInResponseException\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif status in ErrorCode.INVALID_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if value == '' or value is None:\n            value = response['value']\n        if isinstance(value, basestring):\n            if exception_class == ErrorInResponseException:\n                raise exception_class(response, value)\n            raise exception_class(value)\n        if message == \"\" and 'message' in value:\n            message = value['message']\n    \n        screen = None\n        if 'screen' in value:\n            screen = value['screen']\n    \n        stacktrace = None\n        if 'stackTrace' in value and value['stackTrace']:\n            stacktrace = []\n            try:\n                for frame in value['stackTrace']:\n                    line = self._value_or_default(frame, 'lineNumber', '')\n                    file = self._value_or_default(frame, 'fileName', '<anonymous>')\n                    if line:\n                        file = \"%s:%s\" % (file, line)\n                    meth = self._value_or_default(frame, 'methodName', '<anonymous>')\n                    if 'className' in frame:\n                        meth = \"%s.%s\" % (frame['className'], meth)\n                    msg = \"    at %s (%s)\"\n                    msg = msg % (meth, file)\n                    stacktrace.append(msg)\n            except TypeError:\n                pass\n        if exception_class == ErrorInResponseException:\n            raise exception_class(response, message)\n        elif exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if 'data' in value:\n                alert_text = value['data'].get('text')\n            elif 'alert' in value:\n                alert_text = value['alert'].get('text')\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".swal-text\"}\nE         (Session info: headless chrome=92.0.4515.131)\n\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py:242: NoSuchElementException",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "4254bad67abeca3",
+      "name" : "log",
+      "source" : "4254bad67abeca3.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "9ff534025d38a9d",
+      "name" : "stderr",
+      "source" : "9ff534025d38a9d.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "vizsgaremek_tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1011_12_reg"
+  }, {
+    "name" : "host",
+    "value" : "fv-az36-389"
+  }, {
+    "name" : "thread",
+    "value" : "3810-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "vizsgaremek_tests.test_1011_12_reg"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 3,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "9dd7247983cecd82",
+        "reportUrl" : "https://zibinova.github.io/conduit/6//#testresult/9dd7247983cecd82",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628696623644,
+          "stop" : 1628696702978,
+          "duration" : 79334
+        }
+      }, {
+        "uid" : "b30ba39185107114",
+        "reportUrl" : "https://zibinova.github.io/conduit/77//#testresult/b30ba39185107114",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628696610011,
+          "stop" : 1628696689735,
+          "duration" : 79724
+        }
+      }, {
+        "uid" : "db55c363cdeaee8b",
+        "reportUrl" : "https://zibinova.github.io/conduit/5//#testresult/db55c363cdeaee8b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628689865748,
+          "stop" : 1628689945581,
+          "duration" : 79833
+        }
+      }, {
+        "uid" : "b2d86dc7a53324f",
+        "reportUrl" : "https://zibinova.github.io/conduit/76//#testresult/b2d86dc7a53324f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628689858351,
+          "stop" : 1628689938077,
+          "duration" : 79726
+        }
+      }, {
+        "uid" : "7021ca4b9d70899c",
+        "reportUrl" : "https://zibinova.github.io/conduit/4//#testresult/7021ca4b9d70899c",
+        "status" : "broken",
+        "statusDetails" : "ModuleNotFoundError: No module named 'webdriver_manager'",
+        "time" : {
+          "start" : 1628688011656,
+          "stop" : 1628688011656,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "8252f23b7b871ab3",
+        "reportUrl" : "https://zibinova.github.io/conduit/75//#testresult/8252f23b7b871ab3",
+        "status" : "broken",
+        "statusDetails" : "ModuleNotFoundError: No module named 'webdriver_manager'",
+        "time" : {
+          "start" : 1628687995414,
+          "stop" : 1628687995414,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "1fedb3981129c18e.json",
+  "parameterValues" : [ ]
+}
