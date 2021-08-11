@@ -1,0 +1,59 @@
+{
+  "uid" : "8252f23b7b871ab3",
+  "name" : "test_1011_reg",
+  "fullName" : "vizsgaremek_tests.test_1011_12_reg#test_1011_reg",
+  "historyId" : "bb1a2f285f96e9a424e98f3d4f1bd379",
+  "time" : {
+    "start" : 1628687995414,
+    "stop" : 1628687995414,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "ModuleNotFoundError: No module named 'webdriver_manager'",
+  "statusTrace" : "def test_1011_reg():\n        from selenium import webdriver\n        from selenium.webdriver.common.by import By\n        from selenium.webdriver.support.ui import WebDriverWait\n        from selenium.webdriver.support import expected_conditions as EC\n>       from webdriver_manager.chrome import ChromeDriverManager\nE       ModuleNotFoundError: No module named 'webdriver_manager'\n\nvizsgaremek_tests/test_1011_12_reg.py:8: ModuleNotFoundError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "vizsgaremek_tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1011_12_reg"
+  }, {
+    "name" : "host",
+    "value" : "fv-az33-581"
+  }, {
+    "name" : "thread",
+    "value" : "3802-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "vizsgaremek_tests.test_1011_12_reg"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "8252f23b7b871ab3.json",
+  "parameterValues" : [ ]
+}

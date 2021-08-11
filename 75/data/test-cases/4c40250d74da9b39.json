@@ -1,0 +1,59 @@
+{
+  "uid" : "4c40250d74da9b39",
+  "name" : "test_1045_upload",
+  "fullName" : "vizsgaremek_tests.test_1041_upload#test_1045_upload",
+  "historyId" : "bdfc9074005d8b7f0e9008e859bdc11d",
+  "time" : {
+    "start" : 1628687995449,
+    "stop" : 1628687995449,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "ModuleNotFoundError: No module named 'webdriver_manager'",
+  "statusTrace" : "def test_1045_upload():\n    \n        from selenium import webdriver\n>       from webdriver_manager.chrome import ChromeDriverManager\nE       ModuleNotFoundError: No module named 'webdriver_manager'\n\nvizsgaremek_tests/test_1041_upload.py:6: ModuleNotFoundError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "vizsgaremek_tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1041_upload"
+  }, {
+    "name" : "host",
+    "value" : "fv-az33-581"
+  }, {
+    "name" : "thread",
+    "value" : "3802-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "vizsgaremek_tests.test_1041_upload"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "4c40250d74da9b39.json",
+  "parameterValues" : [ ]
+}

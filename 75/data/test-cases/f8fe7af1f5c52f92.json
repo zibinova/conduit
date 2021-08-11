@@ -1,0 +1,59 @@
+{
+  "uid" : "f8fe7af1f5c52f92",
+  "name" : "test_1024_logout",
+  "fullName" : "vizsgaremek_tests.test_1024_logout#test_1024_logout",
+  "historyId" : "117fde88c18f4ce68ab356f31d58b4f6",
+  "time" : {
+    "start" : 1628687995433,
+    "stop" : 1628687995433,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "ModuleNotFoundError: No module named 'webdriver_manager'",
+  "statusTrace" : "def test_1024_logout():\n    \n        from selenium import webdriver\n>       from webdriver_manager.chrome import ChromeDriverManager\nE       ModuleNotFoundError: No module named 'webdriver_manager'\n\nvizsgaremek_tests/test_1024_logout.py:6: ModuleNotFoundError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "vizsgaremek_tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1024_logout"
+  }, {
+    "name" : "host",
+    "value" : "fv-az33-581"
+  }, {
+    "name" : "thread",
+    "value" : "3802-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "vizsgaremek_tests.test_1024_logout"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f8fe7af1f5c52f92.json",
+  "parameterValues" : [ ]
+}
