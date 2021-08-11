@@ -1,24 +1,23 @@
 #  CON_TC_1045_DATA_MOD: data modification
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
-import time
-
-options = Options()
-options.headless = True
-
-# driver = webdriver.Chrome(ChromeDriverManager().install())
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)  # headless mode
-
-# options.add_argument('--headless')
-# options.add_argument('--disable-gpu')
-
-
 def test_1045_data_mod():
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from webdriver_manager.chrome import ChromeDriverManager
+    from selenium.webdriver.chrome.options import Options
+    import time
+
+    options = Options()
+    options.headless = True
+
+    # driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)  # headless mode
+
+    # options.add_argument('--headless')
+    # options.add_argument('--disable-gpu')
+
     driver.get("http://localhost:1667")
     cookie_accept_button = driver.find_element_by_xpath("//div[@class='cookie__bar__buttons']/button[2]")
     cookie_accept_button.click()
