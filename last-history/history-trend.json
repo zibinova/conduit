@@ -1,4 +1,16 @@
 [ {
+  "buildOrder" : 9,
+  "reportUrl" : "https://zibinova.github.io/conduit/9/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 4,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 8,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
   "buildOrder" : 80,
   "reportUrl" : "https://zibinova.github.io/conduit/80/",
   "reportName" : "Allure Report with history",
@@ -218,15 +230,6 @@
   "buildOrder" : 72,
   "reportUrl" : "https://zibinova.github.io/conduit/72/",
   "reportName" : "Allure Report with history",
-  "data" : {
-    "failed" : 0,
-    "broken" : 0,
-    "skipped" : 0,
-    "passed" : 0,
-    "unknown" : 0,
-    "total" : 0
-  }
-}, {
   "data" : {
     "failed" : 0,
     "broken" : 0,

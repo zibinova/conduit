@@ -1,12 +1,12 @@
 {
-  "uid" : "e5614de0c524a22a",
+  "uid" : "ed2ee6a0f3353a98",
   "name" : "test_1023_log",
   "fullName" : "vizsgaremek_tests.test_1023_log#test_1023_log",
   "historyId" : "ef9422a7615e17943047e8c36b20f065",
   "time" : {
-    "start" : 1628696886312,
-    "stop" : 1628696894263,
-    "duration" : 7951
+    "start" : 1628753048095,
+    "stop" : 1628753055182,
+    "duration" : 7087
   },
   "status" : "passed",
   "flaky" : false,
@@ -16,15 +16,15 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "4c091b80ff2564ab",
+      "uid" : "7f501b67c6ff96e5",
       "name" : "log",
-      "source" : "4c091b80ff2564ab.txt",
+      "source" : "7f501b67c6ff96e5.txt",
       "type" : "text/plain",
       "size" : 344
     }, {
-      "uid" : "a3e6d2d5909033fd",
+      "uid" : "5f1d14a71c7287d3",
       "name" : "stderr",
-      "source" : "a3e6d2d5909033fd.txt",
+      "source" : "5f1d14a71c7287d3.txt",
       "type" : "text/plain",
       "size" : 215
     } ],
@@ -43,10 +43,10 @@
     "value" : "test_1023_log"
   }, {
     "name" : "host",
-    "value" : "fv-az36-389"
+    "value" : "fv-az33-581"
   }, {
     "name" : "thread",
-    "value" : "3846-MainThread"
+    "value" : "3806-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -73,11 +73,38 @@
         "failed" : 0,
         "broken" : 2,
         "skipped" : 0,
-        "passed" : 6,
+        "passed" : 9,
         "unknown" : 0,
-        "total" : 8
+        "total" : 11
       },
       "items" : [ {
+        "uid" : "79c35725fe0ecb8d",
+        "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/79c35725fe0ecb8d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628753038457,
+          "stop" : 1628753046542,
+          "duration" : 8085
+        }
+      }, {
+        "uid" : "a97d0c68a58298dc",
+        "reportUrl" : "https://zibinova.github.io/conduit/79//#testresult/a97d0c68a58298dc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628701690055,
+          "stop" : 1628701698230,
+          "duration" : 8175
+        }
+      }, {
+        "uid" : "e5614de0c524a22a",
+        "reportUrl" : "https://zibinova.github.io/conduit/7//#testresult/e5614de0c524a22a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628696886312,
+          "stop" : 1628696894263,
+          "duration" : 7951
+        }
+      }, {
         "uid" : "85ccf789f860a946",
         "reportUrl" : "https://zibinova.github.io/conduit/78//#testresult/85ccf789f860a946",
         "status" : "passed",
@@ -146,6 +173,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "e5614de0c524a22a.json",
+  "source" : "ed2ee6a0f3353a98.json",
   "parameterValues" : [ ]
 }

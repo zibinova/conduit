@@ -1,4 +1,12 @@
 [ {
+  "buildOrder" : 9,
+  "reportUrl" : "https://zibinova.github.io/conduit/9/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 12,
+    "retry" : 0
+  }
+}, {
   "buildOrder" : 80,
   "reportUrl" : "https://zibinova.github.io/conduit/80/",
   "reportName" : "Allure Report with history",
@@ -146,11 +154,6 @@
   "buildOrder" : 72,
   "reportUrl" : "https://zibinova.github.io/conduit/72/",
   "reportName" : "Allure Report with history",
-  "data" : {
-    "run" : 0,
-    "retry" : 0
-  }
-}, {
   "data" : {
     "run" : 0,
     "retry" : 0

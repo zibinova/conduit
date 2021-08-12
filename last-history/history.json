@@ -1,14 +1,24 @@
 {
   "2b107ec223bf494035e5ba2851aa1297" : {
     "statistic" : {
-      "failed" : 4,
+      "failed" : 5,
       "broken" : 0,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 4
+      "total" : 5
     },
     "items" : [ {
+      "uid" : "ec5511fd246a3293",
+      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/ec5511fd246a3293",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert (11 + 5) == 5\n +  where 11 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"e7b5318c14b9745dd39eb5251ef27f8e\", element=\"a87cef07-9dff-...belement.WebElement (session=\"e7b5318c14b9745dd39eb5251ef27f8e\", element=\"2697f0d0-87c0-4f82-a5d9-08ca5e238e73\")>, ...])\n +  and   5 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"e7b5318c14b9745dd39eb5251ef27f8e\", element=\"b0e75efc-6f90-...te.webelement.WebElement (session=\"e7b5318c14b9745dd39eb5251ef27f8e\", element=\"9b073c02-d8c3-42f6-8a35-301ba5f716f6\")>])",
+      "time" : {
+        "start" : 1628753074098,
+        "stop" : 1628753096746,
+        "duration" : 22648
+      }
+    }, {
       "uid" : "b93a4c13c3feeeb6",
       "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/b93a4c13c3feeeb6",
       "status" : "failed",
@@ -55,11 +65,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 8,
+      "passed" : 9,
       "unknown" : 0,
-      "total" : 10
+      "total" : 11
     },
     "items" : [ {
+      "uid" : "8b4ea41a00a72cf",
+      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/8b4ea41a00a72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628753107066,
+        "stop" : 1628753110007,
+        "duration" : 2941
+      }
+    }, {
       "uid" : "2b2666a4bfcf290a",
       "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/2b2666a4bfcf290a",
       "status" : "passed",
@@ -158,11 +177,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 8,
+      "passed" : 9,
       "unknown" : 0,
-      "total" : 10
+      "total" : 11
     },
     "items" : [ {
+      "uid" : "d8755f555b5f247f",
+      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/d8755f555b5f247f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628753019529,
+        "stop" : 1628753029600,
+        "duration" : 10071
+      }
+    }, {
       "uid" : "553809d761181bdf",
       "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/553809d761181bdf",
       "status" : "passed",
@@ -261,11 +289,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 8,
+      "passed" : 9,
       "unknown" : 0,
-      "total" : 10
+      "total" : 11
     },
     "items" : [ {
+      "uid" : "ed2ee6a0f3353a98",
+      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/ed2ee6a0f3353a98",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628753048095,
+        "stop" : 1628753055182,
+        "duration" : 7087
+      }
+    }, {
       "uid" : "79c35725fe0ecb8d",
       "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/79c35725fe0ecb8d",
       "status" : "passed",
@@ -364,11 +401,20 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 6,
+      "passed" : 7,
       "unknown" : 0,
-      "total" : 6
+      "total" : 7
     },
     "items" : [ {
+      "uid" : "ea751f175b6cbe2e",
+      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/ea751f175b6cbe2e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628753063182,
+        "stop" : 1628753074094,
+        "duration" : 10912
+      }
+    }, {
       "uid" : "5307450da4289dfe",
       "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/5307450da4289dfe",
       "status" : "passed",
@@ -429,11 +475,20 @@
       "failed" : 0,
       "broken" : 3,
       "skipped" : 0,
-      "passed" : 7,
+      "passed" : 8,
       "unknown" : 0,
-      "total" : 10
+      "total" : 11
     },
     "items" : [ {
+      "uid" : "8b31fa3eabc9ce96",
+      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/8b31fa3eabc9ce96",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628752926759,
+        "stop" : 1628753006448,
+        "duration" : 79689
+      }
+    }, {
       "uid" : "3f47e8f9a6a98959",
       "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/3f47e8f9a6a98959",
       "status" : "passed",
@@ -533,11 +588,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 8,
+      "passed" : 9,
       "unknown" : 0,
-      "total" : 10
+      "total" : 11
     },
     "items" : [ {
+      "uid" : "4e674f1ba2610403",
+      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/4e674f1ba2610403",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628753055185,
+        "stop" : 1628753063178,
+        "duration" : 7993
+      }
+    }, {
       "uid" : "f2de3b4601a22248",
       "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/f2de3b4601a22248",
       "status" : "passed",
@@ -633,14 +697,24 @@
   },
   "b9162e341abfd4c475daf908a38a7ce5" : {
     "statistic" : {
-      "failed" : 8,
+      "failed" : 9,
       "broken" : 2,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 10
+      "total" : 11
     },
     "items" : [ {
+      "uid" : "babcb31996b5d4b3",
+      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/babcb31996b5d4b3",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert ('Login failed!' == 'Login failed!'\n    Login failed! and 'Invalid user credentials.' == 'Password field required.'\n  - Password field required.\n  + Invalid user credentials.)",
+      "time" : {
+        "start" : 1628753029603,
+        "stop" : 1628753047964,
+        "duration" : 18361
+      }
+    }, {
       "uid" : "8d5454ec9e595e41",
       "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/8d5454ec9e595e41",
       "status" : "failed",
@@ -744,14 +818,24 @@
   },
   "c6f3f628637e1e4ece769f84f117e4c1" : {
     "statistic" : {
-      "failed" : 8,
+      "failed" : 9,
       "broken" : 2,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 10
+      "total" : 11
     },
     "items" : [ {
+      "uid" : "b9f45fac5e86f877",
+      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/b9f45fac5e86f877",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert not True\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"f11e08b8d67c574cdb207a5488d57d1c\", element=\"91b40460-cbb3-4892-90b4-651ea438f5f8\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"f11e08b8d67c574cdb207a5488d57d1c\", element=\"91b40460-cbb3-4892-90b4-651ea438f5f8\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"f11e08b8d67c574cdb207a5488d57d1c\", element=\"91b40460-cbb3-4892-90b4-651ea438f5f8\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"f11e08b8d67c574cdb207a5488d57d1c\", element=\"91b40460-cbb3-4892-90b4-651ea438f5f8\")> = <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"f11e08b8d67c574cdb207a5488d57d1c\")>>('cookie-policy-panel')\n +        where <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"f11e08b8d67c574cdb207a5488d57d1c\")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"f11e08b8d67c574cdb207a5488d57d1c\")>.find_element_by_id",
+      "time" : {
+        "start" : 1628752874260,
+        "stop" : 1628752887705,
+        "duration" : 13445
+      }
+    }, {
       "uid" : "3cdcff4aa0dca043",
       "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/3cdcff4aa0dca043",
       "status" : "failed",
@@ -909,11 +993,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 8,
+      "passed" : 9,
       "unknown" : 0,
-      "total" : 10
+      "total" : 11
     },
     "items" : [ {
+      "uid" : "c8905c2d2ac5a6ea",
+      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/c8905c2d2ac5a6ea",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628752887745,
+        "stop" : 1628752926756,
+        "duration" : 39011
+      }
+    }, {
       "uid" : "def931718d8ea263",
       "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/def931718d8ea263",
       "status" : "passed",
@@ -1009,14 +1102,24 @@
   },
   "ef035eb736c9e05b6a32c3525b32f821" : {
     "statistic" : {
-      "failed" : 8,
+      "failed" : 9,
       "broken" : 2,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 10
+      "total" : 11
     },
     "items" : [ {
+      "uid" : "670d8aa314185d19",
+      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/670d8aa314185d19",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert ('Welcome!' == 'Registration failed!'\n  - Registration failed!\n  + Welcome!)",
+      "time" : {
+        "start" : 1628753006452,
+        "stop" : 1628753019521,
+        "duration" : 13069
+      }
+    }, {
       "uid" : "d3e36d5a8f27eef3",
       "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/d3e36d5a8f27eef3",
       "status" : "failed",
@@ -1123,11 +1226,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 8,
+      "passed" : 9,
       "unknown" : 0,
-      "total" : 10
+      "total" : 11
     },
     "items" : [ {
+      "uid" : "1268fa43a0642c1",
+      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/1268fa43a0642c1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628753096764,
+        "stop" : 1628753107062,
+        "duration" : 10298
+      }
+    }, {
       "uid" : "c9a4501e8e47a5b4",
       "reportUrl" : "https://zibinova.github.io/conduit/80//#testresult/c9a4501e8e47a5b4",
       "status" : "passed",
