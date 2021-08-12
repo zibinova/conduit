@@ -1,0 +1,77 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert not True\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"197c711ffe7e96c350437708a16d68af\", element=\"012640c8-e532-4371-874f-325bf6bb9e9f\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"197c711ffe7e96c350437708a16d68af\", element=\"012640c8-e532-4371-874f-325bf6bb9e9f\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"197c711ffe7e96c350437708a16d68af\", element=\"012640c8-e532-4371-874f-325bf6bb9e9f\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"197c711ffe7e96c350437708a16d68af\", element=\"012640c8-e532-4371-874f-325bf6bb9e9f\")> = <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"197c711ffe7e96c350437708a16d68af\")>>('cookie-policy-panel')\n +        where <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"197c711ffe7e96c350437708a16d68af\")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"197c711ffe7e96c350437708a16d68af\")>.find_element_by_id",
+      "children" : [ {
+        "name" : "test_1000_policy",
+        "uid" : "3cdcff4aa0dca043",
+        "parentUid" : "4897ea5c93d74a3661a54aff1b3165ff",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628752862720,
+          "stop" : 1628752876720,
+          "duration" : 14000
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4897ea5c93d74a3661a54aff1b3165ff"
+    }, {
+      "name" : "AssertionError: assert ('Welcome!' == 'Registration failed!'\n  - Registration failed!\n  + Welcome!)",
+      "children" : [ {
+        "name" : "test_reg_1014_15",
+        "uid" : "d3e36d5a8f27eef3",
+        "parentUid" : "bd76ca08e851c9ef2b744d5beef19c4e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628752995763,
+          "stop" : 1628753008867,
+          "duration" : 13104
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "bd76ca08e851c9ef2b744d5beef19c4e"
+    }, {
+      "name" : "AssertionError: assert ('Login failed!' == 'Login failed!'\n    Login failed! and 'Invalid user credentials.' == 'Password field required.'\n  - Password field required.\n  + Invalid user credentials.)",
+      "children" : [ {
+        "name" : "test_1021_log",
+        "uid" : "8d5454ec9e595e41",
+        "parentUid" : "d2725ad4e7dcd3bf37645aed6cbe793f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628753019027,
+          "stop" : 1628753037332,
+          "duration" : 18305
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d2725ad4e7dcd3bf37645aed6cbe793f"
+    }, {
+      "name" : "AssertionError: assert (11 + 5) == 5\n +  where 11 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"d5242fbe78a98fcc188b0f7f70fdc5d5\", element=\"9f573ff8-d0f3-...belement.WebElement (session=\"d5242fbe78a98fcc188b0f7f70fdc5d5\", element=\"730e5ae6-e4b9-426b-b27e-5cdc7c585b78\")>, ...])\n +  and   5 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"d5242fbe78a98fcc188b0f7f70fdc5d5\", element=\"ee3cc187-3338-...te.webelement.WebElement (session=\"d5242fbe78a98fcc188b0f7f70fdc5d5\", element=\"bdd32005-ecba-45f9-8db3-3a32208d000d\")>])",
+      "children" : [ {
+        "name" : "test_1041_upload",
+        "uid" : "b93a4c13c3feeeb6",
+        "parentUid" : "bca8b7f4cbafe4d399454de32f508520",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628753064671,
+          "stop" : 1628753087536,
+          "duration" : 22865
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "bca8b7f4cbafe4d399454de32f508520"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
