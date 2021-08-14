@@ -1,14 +1,24 @@
 {
   "c6f3f628637e1e4ece769f84f117e4c1" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 2,
       "broken" : 0,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 1
+      "total" : 2
     },
     "items" : [ {
+      "uid" : "4c4c119fc783ac14",
+      "reportUrl" : "https://zibinova.github.io/conduit/12//#testresult/4c4c119fc783ac14",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert not True\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"aa1b7f337d39c31bee79650d3600b296\", element=\"e652325a-7c75-44d9-b947-40700a1d89a2\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"aa1b7f337d39c31bee79650d3600b296\", element=\"e652325a-7c75-44d9-b947-40700a1d89a2\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"aa1b7f337d39c31bee79650d3600b296\", element=\"e652325a-7c75-44d9-b947-40700a1d89a2\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"aa1b7f337d39c31bee79650d3600b296\", element=\"e652325a-7c75-44d9-b947-40700a1d89a2\")> = <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"aa1b7f337d39c31bee79650d3600b296\")>>('cookie-policy-panel')\n +        where <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"aa1b7f337d39c31bee79650d3600b296\")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"aa1b7f337d39c31bee79650d3600b296\")>.find_element_by_id",
+      "time" : {
+        "start" : 1628971085614,
+        "stop" : 1628971099722,
+        "duration" : 14108
+      }
+    }, {
       "uid" : "a8c74f8d7dcfe9db",
       "reportUrl" : "https://zibinova.github.io/conduit/83//#testresult/a8c74f8d7dcfe9db",
       "status" : "failed",
@@ -25,11 +35,20 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 1
+      "total" : 2
     },
     "items" : [ {
+      "uid" : "4693cfe97ded739",
+      "reportUrl" : "https://zibinova.github.io/conduit/12//#testresult/4693cfe97ded739",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628971099770,
+        "stop" : 1628971139582,
+        "duration" : 39812
+      }
+    }, {
       "uid" : "55bbab630df9f366",
       "reportUrl" : "https://zibinova.github.io/conduit/83//#testresult/55bbab630df9f366",
       "status" : "passed",

@@ -1,52 +1,26 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "children" : [ {
-    "name" : "Test defects",
+    "name" : "Product defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
+      "name" : "AssertionError: assert not True\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"aa1b7f337d39c31bee79650d3600b296\", element=\"e652325a-7c75-44d9-b947-40700a1d89a2\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"aa1b7f337d39c31bee79650d3600b296\", element=\"e652325a-7c75-44d9-b947-40700a1d89a2\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"aa1b7f337d39c31bee79650d3600b296\", element=\"e652325a-7c75-44d9-b947-40700a1d89a2\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"aa1b7f337d39c31bee79650d3600b296\", element=\"e652325a-7c75-44d9-b947-40700a1d89a2\")> = <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"aa1b7f337d39c31bee79650d3600b296\")>>('cookie-policy-panel')\n +        where <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"aa1b7f337d39c31bee79650d3600b296\")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"aa1b7f337d39c31bee79650d3600b296\")>.find_element_by_id",
       "children" : [ {
-        "name" : "test_login",
-        "uid" : "c5593b102d0d36a5",
-        "parentUid" : "e4a7d37349393b5a9e33d7e741170037",
-        "status" : "broken",
+        "name" : "test_1000_policy",
+        "uid" : "4c4c119fc783ac14",
+        "parentUid" : "de0f95f3bc6e220d57737b865b021aed",
+        "status" : "failed",
         "time" : {
-          "start" : 1624290889698,
-          "stop" : 1624290889698,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_post",
-        "uid" : "e8470e30df095ba2",
-        "parentUid" : "e4a7d37349393b5a9e33d7e741170037",
-        "status" : "broken",
-        "time" : {
-          "start" : 1624290895949,
-          "stop" : 1624290895949,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_registration",
-        "uid" : "c4690e7a6b9b6679",
-        "parentUid" : "e4a7d37349393b5a9e33d7e741170037",
-        "status" : "broken",
-        "time" : {
-          "start" : 1624290897102,
-          "stop" : 1624290897102,
-          "duration" : 0
+          "start" : 1628971085614,
+          "stop" : 1628971099722,
+          "duration" : 14108
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "e4a7d37349393b5a9e33d7e741170037"
+      "uid" : "de0f95f3bc6e220d57737b865b021aed"
     } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ],
   "name" : "categories"
 }
