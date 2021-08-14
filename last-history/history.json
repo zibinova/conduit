@@ -2,13 +2,23 @@
   "2b107ec223bf494035e5ba2851aa1297" : {
     "statistic" : {
       "failed" : 5,
-      "broken" : 3,
+      "broken" : 4,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 8
+      "total" : 9
     },
     "items" : [ {
+      "uid" : "9e77bfc35234eaeb",
+      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/9e77bfc35234eaeb",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
+      "time" : {
+        "start" : 1628939069012,
+        "stop" : 1628939070970,
+        "duration" : 1958
+      }
+    }, {
       "uid" : "ec0a8048564a647f",
       "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/ec0a8048564a647f",
       "status" : "broken",
@@ -95,11 +105,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 12,
+      "passed" : 13,
       "unknown" : 0,
-      "total" : 14
+      "total" : 15
     },
     "items" : [ {
+      "uid" : "6ceeddf6f7bce250",
+      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/6ceeddf6f7bce250",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628939084929,
+        "stop" : 1628939092446,
+        "duration" : 7517
+      }
+    }, {
       "uid" : "ec368728040acd5f",
       "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/ec368728040acd5f",
       "status" : "passed",
@@ -234,11 +253,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 12,
+      "passed" : 13,
       "unknown" : 0,
-      "total" : 14
+      "total" : 15
     },
     "items" : [ {
+      "uid" : "276058e3883acb34",
+      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/276058e3883acb34",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628939011834,
+        "stop" : 1628939022323,
+        "duration" : 10489
+      }
+    }, {
       "uid" : "c68b76d7c82297ca",
       "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/c68b76d7c82297ca",
       "status" : "passed",
@@ -373,11 +401,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 12,
+      "passed" : 13,
       "unknown" : 0,
-      "total" : 14
+      "total" : 15
     },
     "items" : [ {
+      "uid" : "16155cf2af1cfff5",
+      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/16155cf2af1cfff5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628939040910,
+        "stop" : 1628939049272,
+        "duration" : 8362
+      }
+    }, {
       "uid" : "ba542402fe3771f5",
       "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/ba542402fe3771f5",
       "status" : "passed",
@@ -512,11 +549,20 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 10,
+      "passed" : 11,
       "unknown" : 0,
-      "total" : 10
+      "total" : 11
     },
     "items" : [ {
+      "uid" : "11cba8fa9d677b43",
+      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/11cba8fa9d677b43",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628939057638,
+        "stop" : 1628939069007,
+        "duration" : 11369
+      }
+    }, {
       "uid" : "9a348b723005d1cc",
       "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/9a348b723005d1cc",
       "status" : "passed",
@@ -613,11 +659,20 @@
       "failed" : 0,
       "broken" : 3,
       "skipped" : 0,
-      "passed" : 11,
+      "passed" : 12,
       "unknown" : 0,
-      "total" : 14
+      "total" : 15
     },
     "items" : [ {
+      "uid" : "113eddf7119f5581",
+      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/113eddf7119f5581",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628938918111,
+        "stop" : 1628938998464,
+        "duration" : 80353
+      }
+    }, {
       "uid" : "eebe2956ecf4662a",
       "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/eebe2956ecf4662a",
       "status" : "passed",
@@ -753,11 +808,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 12,
+      "passed" : 13,
       "unknown" : 0,
-      "total" : 14
+      "total" : 15
     },
     "items" : [ {
+      "uid" : "a5e8a4ad53199f9",
+      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/a5e8a4ad53199f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628939049278,
+        "stop" : 1628939057634,
+        "duration" : 8356
+      }
+    }, {
       "uid" : "915adde2c0ae48f2",
       "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/915adde2c0ae48f2",
       "status" : "passed",
@@ -889,14 +953,24 @@
   },
   "b9162e341abfd4c475daf908a38a7ce5" : {
     "statistic" : {
-      "failed" : 12,
+      "failed" : 13,
       "broken" : 2,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 14
+      "total" : 15
     },
     "items" : [ {
+      "uid" : "78407ac50d01d474",
+      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/78407ac50d01d474",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert ('Login failed!' == 'Login failed!'\n    Login failed! and 'Invalid user credentials.' == 'Password field required.'\n  - Password field required.\n  + Invalid user credentials.)",
+      "time" : {
+        "start" : 1628939022327,
+        "stop" : 1628939040897,
+        "duration" : 18570
+      }
+    }, {
       "uid" : "3ff9bcc34be09820",
       "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/3ff9bcc34be09820",
       "status" : "failed",
@@ -1040,14 +1114,24 @@
   },
   "c6f3f628637e1e4ece769f84f117e4c1" : {
     "statistic" : {
-      "failed" : 12,
+      "failed" : 13,
       "broken" : 2,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 14
+      "total" : 15
     },
     "items" : [ {
+      "uid" : "b14aff335326aec5",
+      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/b14aff335326aec5",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert not True\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"b7b38aa25895aae33e3a06fde7d18adf\", element=\"be31b6fb-e5ac-4613-92bf-b9091487192a\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"b7b38aa25895aae33e3a06fde7d18adf\", element=\"be31b6fb-e5ac-4613-92bf-b9091487192a\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"b7b38aa25895aae33e3a06fde7d18adf\", element=\"be31b6fb-e5ac-4613-92bf-b9091487192a\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"b7b38aa25895aae33e3a06fde7d18adf\", element=\"be31b6fb-e5ac-4613-92bf-b9091487192a\")> = <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"b7b38aa25895aae33e3a06fde7d18adf\")>>('cookie-policy-panel')\n +        where <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"b7b38aa25895aae33e3a06fde7d18adf\")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"b7b38aa25895aae33e3a06fde7d18adf\")>.find_element_by_id",
+      "time" : {
+        "start" : 1628938864570,
+        "stop" : 1628938878399,
+        "duration" : 13829
+      }
+    }, {
       "uid" : "23097ecd4623eea3",
       "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/23097ecd4623eea3",
       "status" : "failed",
@@ -1245,11 +1329,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 12,
+      "passed" : 13,
       "unknown" : 0,
-      "total" : 14
+      "total" : 15
     },
     "items" : [ {
+      "uid" : "7c53cc9bcf780459",
+      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/7c53cc9bcf780459",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628938878448,
+        "stop" : 1628938918108,
+        "duration" : 39660
+      }
+    }, {
       "uid" : "5dc730a6fbf40d34",
       "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/5dc730a6fbf40d34",
       "status" : "passed",
@@ -1381,14 +1474,24 @@
   },
   "ef035eb736c9e05b6a32c3525b32f821" : {
     "statistic" : {
-      "failed" : 12,
+      "failed" : 13,
       "broken" : 2,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 14
+      "total" : 15
     },
     "items" : [ {
+      "uid" : "ce710aadfb6f2a5d",
+      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/ce710aadfb6f2a5d",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert ('Welcome!' == 'Registration failed!'\n  - Registration failed!\n  + Welcome!)",
+      "time" : {
+        "start" : 1628938998470,
+        "stop" : 1628939011826,
+        "duration" : 13356
+      }
+    }, {
       "uid" : "4a8cfafa27cf24bb",
       "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/4a8cfafa27cf24bb",
       "status" : "failed",
@@ -1535,11 +1638,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 12,
+      "passed" : 13,
       "unknown" : 0,
-      "total" : 14
+      "total" : 15
     },
     "items" : [ {
+      "uid" : "7658b6fd87cdcaad",
+      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/7658b6fd87cdcaad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628939072204,
+        "stop" : 1628939084926,
+        "duration" : 12722
+      }
+    }, {
       "uid" : "dee4e62c2735f2a6",
       "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/dee4e62c2735f2a6",
       "status" : "passed",

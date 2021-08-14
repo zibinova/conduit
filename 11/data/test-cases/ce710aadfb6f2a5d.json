@@ -1,12 +1,12 @@
 {
-  "uid" : "fd1f92aa3278ca83",
+  "uid" : "ce710aadfb6f2a5d",
   "name" : "test_reg_1014_15",
   "fullName" : "vizsgaremek_tests.test_1014_15_reg#test_reg_1014_15",
   "historyId" : "ef035eb736c9e05b6a32c3525b32f821",
   "time" : {
-    "start" : 1628937285735,
-    "stop" : 1628937298889,
-    "duration" : 13154
+    "start" : 1628938998470,
+    "stop" : 1628939011826,
+    "duration" : 13356
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: assert ('Welcome!' == 'Registration failed!'\n  - Registration failed!\n  + Welcome!)",
@@ -20,15 +20,15 @@
     "statusTrace" : "def test_reg_1014_15():\n        from selenium import webdriver\n        from selenium.webdriver.common.by import By\n        from selenium.webdriver.support.ui import WebDriverWait\n        from selenium.webdriver.support import expected_conditions as EC\n        from webdriver_manager.chrome import ChromeDriverManager\n        from selenium.webdriver.chrome.options import Options\n        import time\n        import random\n        import string\n    \n        options = Options()\n        options.headless = True\n    \n        # driver = webdriver.Chrome(ChromeDriverManager().install())\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)  # headless mode\n    \n        # options.add_argument('--headless')\n        # options.add_argument('--disable-gpu')\n    \n        driver.get(\"http://localhost:1667\")\n    \n        # giving cookie consent\n        cookie_accept_button = driver.find_element_by_xpath(\"//div[@class='cookie__bar__buttons']/button[2]\")\n        cookie_accept_button.click()\n    \n    \n        def user_registration(username, email, password):\n            user_name = driver.find_element_by_xpath(\"//form/fieldset[1]/input\")\n            e_mail = driver.find_element_by_xpath(\"//form/fieldset[2]/input\")\n            pass_word = driver.find_element_by_xpath(\"//form/fieldset[3]/input\")\n            sign_up_button = driver.find_element_by_xpath('//form/button')\n    \n            user_name.send_keys(username)\n            e_mail.send_keys(email)\n            pass_word.send_keys(password)\n            time.sleep(3)\n            sign_up_button.click()\n    \n    \n        def assert_handling(expected_title, expected_text):\n            WebDriverWait(driver, 10).until(\n                EC.visibility_of_element_located((By.XPATH, \"//div[@class='swal-title']\")))\n    \n            swal_title = driver.find_element_by_xpath(\"//div[@class='swal-title']\").text\n            swal_text = driver.find_element_by_class_name(\"swal-text\").text\n            assert (swal_title == expected_title and swal_text == expected_text)\n    \n    \n        def back_to_form():  # acknowledging error/getting sign up form back\n            ok_button = driver.find_element_by_class_name(\"swal-button\")\n            ok_button.click()\n    \n        # generating random test data\n    \n    \n        numeric_part = \"\".join([random.choice(string.digits) for _ in range(2)])\n        lowercase_part = \"\".join([random.choice(string.ascii_lowercase) for _ in range(4)])\n        uppercase_part = \"\".join([random.choice(string.ascii_uppercase) for _ in range(4)])\n        special_part = \"\".join([random.choice(string.punctuation) for _ in range(2)])\n        rnd_un = \"\".join([random.choice(string.ascii_lowercase) for _ in range(5)])\n        rnd_em = rnd_un + \"@\" + lowercase_part + \".com\"\n        rnd_pw = numeric_part + lowercase_part + uppercase_part + special_part\n    \n        # getting sign-up form\n    \n        sign_up_link = driver.find_element_by_xpath(\"//ul/li[3]/a\")\n        sign_up_link.click()\n        time.sleep(3)\n    \n        user_registration(\"testella\", \"testella@gmail.com\", \"Teszt123\")\n        time.sleep(5)\n>       assert_handling(\"Registration failed!\", \"Email already taken.\")\n\nvizsgaremek_tests/test_1014_15_reg.py:76: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nexpected_title = 'Registration failed!', expected_text = 'Email already taken.'\n\n    def assert_handling(expected_title, expected_text):\n        WebDriverWait(driver, 10).until(\n            EC.visibility_of_element_located((By.XPATH, \"//div[@class='swal-title']\")))\n    \n        swal_title = driver.find_element_by_xpath(\"//div[@class='swal-title']\").text\n        swal_text = driver.find_element_by_class_name(\"swal-text\").text\n>       assert (swal_title == expected_title and swal_text == expected_text)\nE       AssertionError: assert ('Welcome!' == 'Registration failed!'\nE         - Registration failed!\nE         + Welcome!)\n\nvizsgaremek_tests/test_1014_15_reg.py:50: AssertionError",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "c1e7a1d0d9c66a1a",
+      "uid" : "bf83849194dc5484",
       "name" : "log",
-      "source" : "c1e7a1d0d9c66a1a.txt",
+      "source" : "bf83849194dc5484.txt",
       "type" : "text/plain",
       "size" : 344
     }, {
-      "uid" : "30ad5a064cc59c8d",
+      "uid" : "2a1b3ecf10f63db0",
       "name" : "stderr",
-      "source" : "30ad5a064cc59c8d.txt",
+      "source" : "2a1b3ecf10f63db0.txt",
       "type" : "text/plain",
       "size" : 215
     } ],
@@ -47,10 +47,10 @@
     "value" : "test_1014_15_reg"
   }, {
     "name" : "host",
-    "value" : "fv-az74-944"
+    "value" : "fv-az77-942"
   }, {
     "name" : "thread",
-    "value" : "3753-MainThread"
+    "value" : "3725-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -78,14 +78,34 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 11,
+        "failed" : 13,
         "broken" : 2,
         "skipped" : 0,
         "passed" : 0,
         "unknown" : 0,
-        "total" : 13
+        "total" : 15
       },
       "items" : [ {
+        "uid" : "4a8cfafa27cf24bb",
+        "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/4a8cfafa27cf24bb",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert ('Welcome!' == 'Registration failed!'\n  - Registration failed!\n  + Welcome!)",
+        "time" : {
+          "start" : 1628938984123,
+          "stop" : 1628938997273,
+          "duration" : 13150
+        }
+      }, {
+        "uid" : "fd1f92aa3278ca83",
+        "reportUrl" : "https://zibinova.github.io/conduit/10//#testresult/fd1f92aa3278ca83",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert ('Welcome!' == 'Registration failed!'\n  - Registration failed!\n  + Welcome!)",
+        "time" : {
+          "start" : 1628937285735,
+          "stop" : 1628937298889,
+          "duration" : 13154
+        }
+      }, {
         "uid" : "9ed5e891aa33ee82",
         "reportUrl" : "https://zibinova.github.io/conduit/81//#testresult/9ed5e891aa33ee82",
         "status" : "failed",
@@ -209,6 +229,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "fd1f92aa3278ca83.json",
+  "source" : "ce710aadfb6f2a5d.json",
   "parameterValues" : [ ]
 }

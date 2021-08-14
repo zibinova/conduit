@@ -1,12 +1,12 @@
 {
-  "uid" : "ade7f55bfdc3f820",
+  "uid" : "a5e8a4ad53199f9",
   "name" : "test_1024_logout",
   "fullName" : "vizsgaremek_tests.test_1024_logout#test_1024_logout",
   "historyId" : "117fde88c18f4ce68ab356f31d58b4f6",
   "time" : {
-    "start" : 1628937335773,
-    "stop" : 1628937343899,
-    "duration" : 8126
+    "start" : 1628939049278,
+    "stop" : 1628939057634,
+    "duration" : 8356
   },
   "status" : "passed",
   "flaky" : false,
@@ -16,15 +16,15 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "3d640554589aa40a",
+      "uid" : "ddd112088a2135b7",
       "name" : "log",
-      "source" : "3d640554589aa40a.txt",
+      "source" : "ddd112088a2135b7.txt",
       "type" : "text/plain",
       "size" : 344
     }, {
-      "uid" : "346b919e01c594a6",
+      "uid" : "2ae2e0b946a7260e",
       "name" : "stderr",
-      "source" : "346b919e01c594a6.txt",
+      "source" : "2ae2e0b946a7260e.txt",
       "type" : "text/plain",
       "size" : 215
     } ],
@@ -43,10 +43,10 @@
     "value" : "test_1024_logout"
   }, {
     "name" : "host",
-    "value" : "fv-az74-944"
+    "value" : "fv-az77-942"
   }, {
     "name" : "thread",
-    "value" : "3753-MainThread"
+    "value" : "3725-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -73,11 +73,29 @@
         "failed" : 0,
         "broken" : 2,
         "skipped" : 0,
-        "passed" : 11,
+        "passed" : 13,
         "unknown" : 0,
-        "total" : 13
+        "total" : 15
       },
       "items" : [ {
+        "uid" : "915adde2c0ae48f2",
+        "reportUrl" : "https://zibinova.github.io/conduit/82//#testresult/915adde2c0ae48f2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628939033882,
+          "stop" : 1628939041983,
+          "duration" : 8101
+        }
+      }, {
+        "uid" : "ade7f55bfdc3f820",
+        "reportUrl" : "https://zibinova.github.io/conduit/10//#testresult/ade7f55bfdc3f820",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628937335773,
+          "stop" : 1628937343899,
+          "duration" : 8126
+        }
+      }, {
         "uid" : "a37e1ecfe4ccb5d3",
         "reportUrl" : "https://zibinova.github.io/conduit/81//#testresult/a37e1ecfe4ccb5d3",
         "status" : "passed",
@@ -191,6 +209,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "ade7f55bfdc3f820.json",
+  "source" : "a5e8a4ad53199f9.json",
   "parameterValues" : [ ]
 }

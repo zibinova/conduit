@@ -1,31 +1,121 @@
 [ {
-  "uid" : "5cdc3e0ea07cf2e3",
-  "name" : "test_login",
+  "uid" : "b14aff335326aec5",
+  "name" : "test_1000_policy",
   "time" : {
-    "start" : 1624290496902,
-    "stop" : 1624290496902,
-    "duration" : 0
+    "start" : 1628938864570,
+    "stop" : 1628938878399,
+    "duration" : 13829
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "78407ac50d01d474",
+  "name" : "test_1021_log",
+  "time" : {
+    "start" : 1628939022327,
+    "stop" : 1628939040897,
+    "duration" : 18570
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "276058e3883acb34",
+  "name" : "test_1020_log",
+  "time" : {
+    "start" : 1628939011834,
+    "stop" : 1628939022323,
+    "duration" : 10489
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9e77bfc35234eaeb",
+  "name" : "test_1041_upload",
+  "time" : {
+    "start" : 1628939069012,
+    "stop" : 1628939070970,
+    "duration" : 1958
   },
   "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "a2cdb21b89817d84",
-  "name" : "test_post",
+  "uid" : "7658b6fd87cdcaad",
+  "name" : "test_1045_data_mod",
   "time" : {
-    "start" : 1624290507684,
-    "stop" : 1624290507684,
-    "duration" : 0
+    "start" : 1628939072204,
+    "stop" : 1628939084926,
+    "duration" : 12722
   },
-  "status" : "broken",
+  "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "462f3ae691338af3",
-  "name" : "test_registration",
+  "uid" : "ce710aadfb6f2a5d",
+  "name" : "test_reg_1014_15",
   "time" : {
-    "start" : 1624290508840,
-    "stop" : 1624290508840,
-    "duration" : 0
+    "start" : 1628938998470,
+    "stop" : 1628939011826,
+    "duration" : 13356
   },
-  "status" : "broken",
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "a5e8a4ad53199f9",
+  "name" : "test_1024_logout",
+  "time" : {
+    "start" : 1628939049278,
+    "stop" : 1628939057634,
+    "duration" : 8356
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "113eddf7119f5581",
+  "name" : "test_1011_reg",
+  "time" : {
+    "start" : 1628938918111,
+    "stop" : 1628938998464,
+    "duration" : 80353
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "16155cf2af1cfff5",
+  "name" : "test_1023_log",
+  "time" : {
+    "start" : 1628939040910,
+    "stop" : 1628939049272,
+    "duration" : 8362
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "11cba8fa9d677b43",
+  "name" : "test_1040_entry_del",
+  "time" : {
+    "start" : 1628939057638,
+    "stop" : 1628939069007,
+    "duration" : 11369
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7c53cc9bcf780459",
+  "name" : "test_1010_13reg",
+  "time" : {
+    "start" : 1628938878448,
+    "stop" : 1628938918108,
+    "duration" : 39660
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6ceeddf6f7bce250",
+  "name" : "test_1051_list",
+  "time" : {
+    "start" : 1628939084929,
+    "stop" : 1628939092446,
+    "duration" : 7517
+  },
+  "status" : "passed",
   "severity" : "normal"
 } ]
