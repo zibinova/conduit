@@ -32,10 +32,6 @@ def test_1000_policy():
     driver.close()
 
     # reopen browser
-    import time
-    from selenium import webdriver
-    from webdriver_manager.chrome import ChromeDriverManager
-    from selenium.webdriver.chrome.options import Options
 
     options = Options()
     options.headless = True
