@@ -3,6 +3,162 @@
   "reportUrl" : "https://zibinova.github.io/conduit/10/",
   "reportName" : "Allure Report with history",
   "data" : {
+    "failed" : 3,
+    "broken" : 1,
+    "skipped" : 0,
+    "passed" : 8,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 81,
+  "reportUrl" : "https://zibinova.github.io/conduit/81/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 3,
+    "broken" : 1,
+    "skipped" : 0,
+    "passed" : 8,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 9,
+  "reportUrl" : "https://zibinova.github.io/conduit/9/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 4,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 8,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 80,
+  "reportUrl" : "https://zibinova.github.io/conduit/80/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 4,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 8,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 79,
+  "reportUrl" : "https://zibinova.github.io/conduit/79/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 4,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 8,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 7,
+  "reportUrl" : "https://zibinova.github.io/conduit/7/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 4,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 8,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 78,
+  "reportUrl" : "https://zibinova.github.io/conduit/78/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 4,
+    "broken" : 1,
+    "skipped" : 0,
+    "passed" : 7,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 6,
+  "reportUrl" : "https://zibinova.github.io/conduit/6/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 4,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 8,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 77,
+  "reportUrl" : "https://zibinova.github.io/conduit/77/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 4,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 8,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 5,
+  "reportUrl" : "https://zibinova.github.io/conduit/5/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 4,
+    "broken" : 1,
+    "skipped" : 0,
+    "passed" : 7,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 76,
+  "reportUrl" : "https://zibinova.github.io/conduit/76/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 4,
+    "broken" : 1,
+    "skipped" : 0,
+    "passed" : 7,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 4,
+  "reportUrl" : "https://zibinova.github.io/conduit/4/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 12,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 75,
+  "reportUrl" : "https://zibinova.github.io/conduit/75/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 12,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 3,
+  "reportUrl" : "https://zibinova.github.io/conduit/3/",
+  "reportName" : "Allure Report with history",
+  "data" : {
     "failed" : 0,
     "broken" : 0,
     "skipped" : 0,
@@ -11,15 +167,75 @@
     "total" : 0
   }
 }, {
-  "buildOrder" : 9,
-  "reportUrl" : "https://zibinova.github.io/conduit/9/",
+  "buildOrder" : 3,
+  "reportUrl" : "https://zibinova.github.io/conduit/3/",
   "reportName" : "Allure Report with history",
   "data" : {
     "failed" : 0,
-    "broken" : 3,
+    "broken" : 0,
     "skipped" : 0,
     "passed" : 0,
     "unknown" : 0,
-    "total" : 3
+    "total" : 0
+  }
+}, {
+  "buildOrder" : 74,
+  "reportUrl" : "https://zibinova.github.io/conduit/74/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 0
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://zibinova.github.io/conduit/1/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 0
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://zibinova.github.io/conduit/1/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 0
+  }
+}, {
+  "buildOrder" : 2,
+  "reportUrl" : "https://zibinova.github.io/conduit/2/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 0
+  }
+}, {
+  "buildOrder" : 73,
+  "reportUrl" : "https://zibinova.github.io/conduit/73/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 0
   }
 } ]
