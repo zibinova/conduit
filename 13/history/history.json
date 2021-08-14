@@ -1,154 +1,305 @@
 {
-  "b455feb8531ce589e7ad0d23cde6e7ff" : {
+  "bb1a2f285f96e9a424e98f3d4f1bd379" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 4,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
-      "total" : 4
+      "total" : 1
     },
     "items" : [ {
-      "uid" : "18320c34887c7f93",
-      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/18320c34887c7f93",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
+      "uid" : "86cf9f6cd69fba00",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/86cf9f6cd69fba00",
+      "status" : "passed",
       "time" : {
-        "start" : 1624291812013,
-        "stop" : 1624291812013,
-        "duration" : 0
-      }
-    }, {
-      "uid" : "c5593b102d0d36a5",
-      "reportUrl" : "https://zibinova.github.io/conduit/12//#testresult/c5593b102d0d36a5",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
-      "time" : {
-        "start" : 1624290889698,
-        "stop" : 1624290889698,
-        "duration" : 0
-      }
-    }, {
-      "uid" : "5cdc3e0ea07cf2e3",
-      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/5cdc3e0ea07cf2e3",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
-      "time" : {
-        "start" : 1624290496902,
-        "stop" : 1624290496902,
-        "duration" : 0
-      }
-    }, {
-      "uid" : "e2b8031d2ea856c0",
-      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/e2b8031d2ea856c0",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
-      "time" : {
-        "start" : 1624273575405,
-        "stop" : 1624273575405,
-        "duration" : 0
+        "start" : 1628971231338,
+        "stop" : 1628971310953,
+        "duration" : 79615
       }
     } ]
   },
-  "227ddc143b2da62ff9250114099efda8" : {
+  "2b107ec223bf494035e5ba2851aa1297" : {
     "statistic" : {
-      "failed" : 0,
-      "broken" : 4,
+      "failed" : 1,
+      "broken" : 0,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 4
+      "total" : 1
     },
     "items" : [ {
-      "uid" : "8373fcf8cc79b730",
-      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/8373fcf8cc79b730",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
+      "uid" : "ec33d457cd8fd803",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/ec33d457cd8fd803",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert (11 + 5) == 5\n +  where 11 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"2e0ee87d9200dfb3bd6935af6fac6bf5\", element=\"439dd018-90f8-...belement.WebElement (session=\"2e0ee87d9200dfb3bd6935af6fac6bf5\", element=\"7d53c105-52b4-45ea-b770-4b5723075a51\")>, ...])\n +  and   5 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"2e0ee87d9200dfb3bd6935af6fac6bf5\", element=\"aebb41a0-a2a6-...te.webelement.WebElement (session=\"2e0ee87d9200dfb3bd6935af6fac6bf5\", element=\"c9f8537f-0107-42a3-85c4-05f2c880f03a\")>])",
       "time" : {
-        "start" : 1624291819336,
-        "stop" : 1624291819336,
-        "duration" : 0
-      }
-    }, {
-      "uid" : "c4690e7a6b9b6679",
-      "reportUrl" : "https://zibinova.github.io/conduit/12//#testresult/c4690e7a6b9b6679",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
-      "time" : {
-        "start" : 1624290897102,
-        "stop" : 1624290897102,
-        "duration" : 0
-      }
-    }, {
-      "uid" : "462f3ae691338af3",
-      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/462f3ae691338af3",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
-      "time" : {
-        "start" : 1624290508840,
-        "stop" : 1624290508840,
-        "duration" : 0
-      }
-    }, {
-      "uid" : "2beedc1de50a7f4d",
-      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/2beedc1de50a7f4d",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
-      "time" : {
-        "start" : 1624273578436,
-        "stop" : 1624273578436,
-        "duration" : 0
+        "start" : 1628971379308,
+        "stop" : 1628971419890,
+        "duration" : 40582
       }
     } ]
   },
-  "223efa39351c03a2eae8e1835e2dad3a" : {
+  "117fde88c18f4ce68ab356f31d58b4f6" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 4,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b0820c51730f0daf",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/b0820c51730f0daf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628971360388,
+        "stop" : 1628971368436,
+        "duration" : 8048
+      }
+    } ]
+  },
+  "b9162e341abfd4c475daf908a38a7ce5" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 4
+      "total" : 1
     },
     "items" : [ {
-      "uid" : "1198ed22ddf589f0",
-      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/1198ed22ddf589f0",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
+      "uid" : "f82bb9821a7e1169",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/f82bb9821a7e1169",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert ('Login failed!' == 'Login failed!'\n    Login failed! and 'Invalid user credentials.' == 'Password field required.'\n  - Password field required.\n  + Invalid user credentials.)",
       "time" : {
-        "start" : 1624291818067,
-        "stop" : 1624291818067,
-        "duration" : 0
+        "start" : 1628971334105,
+        "stop" : 1628971352327,
+        "duration" : 18222
+      }
+    } ]
+  },
+  "598d743a1f35360e8dee6a13717baa89" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d7052599283669fd",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/d7052599283669fd",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 22 == 26\n +  where 22 = len(['Lorem ipsum dolor sit amet', 'In nisl nisi scelerisque eu', 'Urna nunc id cursus metus.', 'Egestas egestas', 'Laoreet suspendisse interdum', 'Nibh praesent tristique magna', ...])",
+      "time" : {
+        "start" : 1628971440324,
+        "stop" : 1628971455604,
+        "duration" : 15280
+      }
+    } ]
+  },
+  "c6f3f628637e1e4ece769f84f117e4c1" : {
+    "statistic" : {
+      "failed" : 3,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "514519bf1eb7cdb5",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/514519bf1eb7cdb5",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert not True\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"736fac1c78d741f89ceae745378b7d92\", element=\"f0e5d926-3601-4e0c-873f-5e1beb877913\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"736fac1c78d741f89ceae745378b7d92\", element=\"f0e5d926-3601-4e0c-873f-5e1beb877913\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"736fac1c78d741f89ceae745378b7d92\", element=\"f0e5d926-3601-4e0c-873f-5e1beb877913\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"736fac1c78d741f89ceae745378b7d92\", element=\"f0e5d926-3601-4e0c-873f-5e1beb877913\")> = <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"736fac1c78d741f89ceae745378b7d92\")>>('cookie-policy-panel')\n +        where <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"736fac1c78d741f89ceae745378b7d92\")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"736fac1c78d741f89ceae745378b7d92\")>.find_element_by_id",
+      "time" : {
+        "start" : 1628971169380,
+        "stop" : 1628971191866,
+        "duration" : 22486
       }
     }, {
-      "uid" : "e8470e30df095ba2",
-      "reportUrl" : "https://zibinova.github.io/conduit/12//#testresult/e8470e30df095ba2",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
+      "uid" : "4c4c119fc783ac14",
+      "reportUrl" : "https://zibinova.github.io/conduit/12//#testresult/4c4c119fc783ac14",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert not True\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"aa1b7f337d39c31bee79650d3600b296\", element=\"e652325a-7c75-44d9-b947-40700a1d89a2\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"aa1b7f337d39c31bee79650d3600b296\", element=\"e652325a-7c75-44d9-b947-40700a1d89a2\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"aa1b7f337d39c31bee79650d3600b296\", element=\"e652325a-7c75-44d9-b947-40700a1d89a2\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"aa1b7f337d39c31bee79650d3600b296\", element=\"e652325a-7c75-44d9-b947-40700a1d89a2\")> = <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"aa1b7f337d39c31bee79650d3600b296\")>>('cookie-policy-panel')\n +        where <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"aa1b7f337d39c31bee79650d3600b296\")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"aa1b7f337d39c31bee79650d3600b296\")>.find_element_by_id",
       "time" : {
-        "start" : 1624290895949,
-        "stop" : 1624290895949,
-        "duration" : 0
+        "start" : 1628971085614,
+        "stop" : 1628971099722,
+        "duration" : 14108
       }
     }, {
-      "uid" : "a2cdb21b89817d84",
-      "reportUrl" : "https://zibinova.github.io/conduit/11//#testresult/a2cdb21b89817d84",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
+      "uid" : "a8c74f8d7dcfe9db",
+      "reportUrl" : "https://zibinova.github.io/conduit/83//#testresult/a8c74f8d7dcfe9db",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert not True\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"9d45cf95736626f840bd9eed32f2d3b6\", element=\"df40b9fa-9bcc-4cc6-aaa3-d3a4f830bc95\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"9d45cf95736626f840bd9eed32f2d3b6\", element=\"df40b9fa-9bcc-4cc6-aaa3-d3a4f830bc95\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"9d45cf95736626f840bd9eed32f2d3b6\", element=\"df40b9fa-9bcc-4cc6-aaa3-d3a4f830bc95\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"9d45cf95736626f840bd9eed32f2d3b6\", element=\"df40b9fa-9bcc-4cc6-aaa3-d3a4f830bc95\")> = <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"9d45cf95736626f840bd9eed32f2d3b6\")>>('cookie-policy-panel')\n +        where <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"9d45cf95736626f840bd9eed32f2d3b6\")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"9d45cf95736626f840bd9eed32f2d3b6\")>.find_element_by_id",
       "time" : {
-        "start" : 1624290507684,
-        "stop" : 1624290507684,
-        "duration" : 0
+        "start" : 1628971066499,
+        "stop" : 1628971086979,
+        "duration" : 20480
+      }
+    } ]
+  },
+  "26a0878fb5e73d08b93d4968fe1590c0" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6ffffc2432bea8ba",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/6ffffc2432bea8ba",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 16 == 6\n +  where 16 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"1ef11e559c7fa6119d1f09ddd70353ea\", element=\"dcb1c44f-6284-...belement.WebElement (session=\"1ef11e559c7fa6119d1f09ddd70353ea\", element=\"68fa3e86-ad1f-43f8-adda-d61a4f90257f\")>, ...])",
+      "time" : {
+        "start" : 1628971433205,
+        "stop" : 1628971440316,
+        "duration" : 7111
+      }
+    } ]
+  },
+  "ef035eb736c9e05b6a32c3525b32f821" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c5a43fcd96242c84",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/c5a43fcd96242c84",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert ('Welcome!' == 'Registration failed!'\n  - Registration failed!\n  + Welcome!)",
+      "time" : {
+        "start" : 1628971310958,
+        "stop" : 1628971324012,
+        "duration" : 13054
+      }
+    } ]
+  },
+  "5fa3c5ee082953abbb20bafe2092ea13" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e1563ba692f87b9e",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/e1563ba692f87b9e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628971419908,
+        "stop" : 1628971433202,
+        "duration" : 13294
+      }
+    } ]
+  },
+  "b181c208573fbcc0dbe8b19c53c9180c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "b351d181911449fa",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/b351d181911449fa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628971191908,
+        "stop" : 1628971231334,
+        "duration" : 39426
       }
     }, {
-      "uid" : "d12ee9b6f260510a",
-      "reportUrl" : "https://zibinova.github.io/conduit/9//#testresult/d12ee9b6f260510a",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
+      "uid" : "4693cfe97ded739",
+      "reportUrl" : "https://zibinova.github.io/conduit/12//#testresult/4693cfe97ded739",
+      "status" : "passed",
       "time" : {
-        "start" : 1624273577230,
-        "stop" : 1624273577230,
-        "duration" : 0
+        "start" : 1628971099770,
+        "stop" : 1628971139582,
+        "duration" : 39812
+      }
+    }, {
+      "uid" : "55bbab630df9f366",
+      "reportUrl" : "https://zibinova.github.io/conduit/83//#testresult/55bbab630df9f366",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628971087022,
+        "stop" : 1628971126274,
+        "duration" : 39252
+      }
+    } ]
+  },
+  "ef9422a7615e17943047e8c36b20f065" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "17f62165ee802cf9",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/17f62165ee802cf9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628971352336,
+        "stop" : 1628971360382,
+        "duration" : 8046
+      }
+    } ]
+  },
+  "34a133d5461e7e21de242891d5c058e2" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "bbc10647648a0322",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/bbc10647648a0322",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628971324021,
+        "stop" : 1628971334101,
+        "duration" : 10080
+      }
+    } ]
+  },
+  "64e3db65e3ce27cdd3a89f4066290295" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a66999abebe548d5",
+      "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/a66999abebe548d5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628971368440,
+        "stop" : 1628971379303,
+        "duration" : 10863
       }
     } ]
   }

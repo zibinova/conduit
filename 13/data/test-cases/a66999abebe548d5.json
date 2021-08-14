@@ -1,0 +1,75 @@
+{
+  "uid" : "a66999abebe548d5",
+  "name" : "test_1040_entry_del",
+  "fullName" : "vizsgaremek_tests.test_1040_entry_del#test_1040_entry_del",
+  "historyId" : "64e3db65e3ce27cdd3a89f4066290295",
+  "time" : {
+    "start" : 1628971368440,
+    "stop" : 1628971379303,
+    "duration" : 10863
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2d5b512cdf8056de",
+      "name" : "log",
+      "source" : "2d5b512cdf8056de.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "82eafd06dedcbf7",
+      "name" : "stderr",
+      "source" : "82eafd06dedcbf7.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "vizsgaremek_tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1040_entry_del"
+  }, {
+    "name" : "host",
+    "value" : "fv-az33-581"
+  }, {
+    "name" : "thread",
+    "value" : "3733-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "vizsgaremek_tests.test_1040_entry_del"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a66999abebe548d5.json",
+  "parameterValues" : [ ]
+}
