@@ -10,8 +10,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 def test_1041_upload():
-    # In order for ChromeDriverManager to work you must pip install it in your own environment.
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+
     options = Options()
     options.headless = True
 
