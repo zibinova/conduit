@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert not True\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"9d45cf95736626f840bd9eed32f2d3b6\", element=\"df40b9fa-9bcc-4cc6-aaa3-d3a4f830bc95\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"9d45cf95736626f840bd9eed32f2d3b6\", element=\"df40b9fa-9bcc-4cc6-aaa3-d3a4f830bc95\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"9d45cf95736626f840bd9eed32f2d3b6\", element=\"df40b9fa-9bcc-4cc6-aaa3-d3a4f830bc95\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"9d45cf95736626f840bd9eed32f2d3b6\", element=\"df40b9fa-9bcc-4cc6-aaa3-d3a4f830bc95\")> = <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"9d45cf95736626f840bd9eed32f2d3b6\")>>('cookie-policy-panel')\n +        where <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"9d45cf95736626f840bd9eed32f2d3b6\")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"9d45cf95736626f840bd9eed32f2d3b6\")>.find_element_by_id",
+      "children" : [ {
+        "name" : "test_1000_policy",
+        "uid" : "a8c74f8d7dcfe9db",
+        "parentUid" : "3194f0e97cd5eb4156859708647d60e3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628971066499,
+          "stop" : 1628971086979,
+          "duration" : 20480
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3194f0e97cd5eb4156859708647d60e3"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

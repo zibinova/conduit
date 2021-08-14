@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Sat Aug 14 19:57:46 GMT 2021","Sat Aug 14 19:58:06 GMT 2021","20480","vizsgaremek_tests","test_1000_policy","","","","test_1000_policy",""
+"passed","Sat Aug 14 19:58:07 GMT 2021","Sat Aug 14 19:58:46 GMT 2021","39252","vizsgaremek_tests","test_1010_13_reg","","","","test_1010_13reg",""

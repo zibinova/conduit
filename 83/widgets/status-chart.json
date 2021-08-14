@@ -1,0 +1,21 @@
+[ {
+  "uid" : "a8c74f8d7dcfe9db",
+  "name" : "test_1000_policy",
+  "time" : {
+    "start" : 1628971066499,
+    "stop" : 1628971086979,
+    "duration" : 20480
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "55bbab630df9f366",
+  "name" : "test_1010_13reg",
+  "time" : {
+    "start" : 1628971087022,
+    "stop" : 1628971126274,
+    "duration" : 39252
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
