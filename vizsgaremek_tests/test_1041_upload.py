@@ -6,12 +6,20 @@ import csv
 import time
 from datetime import date
 from datetime import datetime
+from selenium.webdriver.chrome.options import Options
 
 
 def test_1041_upload():
     # In order for ChromeDriverManager to work you must pip install it in your own environment.
     driver = webdriver.Chrome(ChromeDriverManager().install())
+    options = Options()
+    options.headless = True
 
+    # driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)  # headless mode
+
+    # options.add_argument('--headless')
+    # options.add_argument('--disable-gpu')
     URL = "http://localhost:1667"
     driver.get(URL)
 

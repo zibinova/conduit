@@ -1,13 +1,15 @@
 #  CON_TC_1051_LIST: Data listing
 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+import time
+
+
 def test_1051_list():
-    from selenium import webdriver
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from webdriver_manager.chrome import ChromeDriverManager
-    from selenium.webdriver.chrome.options import Options
-    import time
 
     options = Options()
     options.headless = True
@@ -21,11 +23,14 @@ def test_1051_list():
     cookie_accept_button = driver.find_element_by_xpath("//div[@class='cookie__bar__buttons']/button[2]")
     cookie_accept_button.click()
 
-    # login to app
-    driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[2]/a").click()
-    driver.find_element_by_xpath("//form/fieldset[1]/input").send_keys("testella@gmail.com")
-    driver.find_element_by_xpath("//form/fieldset[2]/input").send_keys("Teszt123")
-    driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/button').click()
+    def login():
+        driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[2]/a").click()
+        driver.find_element_by_xpath("//form/fieldset[1]/input").send_keys("testella@gmail.com")
+        driver.find_element_by_xpath("//form/fieldset[2]/input").send_keys("Teszt123")
+        driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/button').click()
+        time.sleep(5)
+
+    login()
 
     # listing articles with tag "dolor" from Popular Tags section
     WebDriverWait(driver, 10).until(

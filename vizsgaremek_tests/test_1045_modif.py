@@ -1,13 +1,14 @@
 #  CON_TC_1045_DATA_MOD: data modification
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+import time
+
 
 def test_1045_data_mod():
-    from selenium import webdriver
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from webdriver_manager.chrome import ChromeDriverManager
-    from selenium.webdriver.chrome.options import Options
-    import time
 
     options = Options()
     options.headless = True
@@ -23,11 +24,15 @@ def test_1045_data_mod():
     cookie_accept_button.click()
 
     # login to app
-    driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[2]/a").click()
-    driver.find_element_by_xpath("//form/fieldset[1]/input").send_keys("testella@gmail.com")
-    driver.find_element_by_xpath("//form/fieldset[2]/input").send_keys("Teszt123")
-    driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/button').click()
-    time.sleep(2)
+    def login():
+        driver.find_element_by_xpath("//*[@id='app']/nav/div/ul/li[2]/a").click()
+        driver.find_element_by_xpath("//form/fieldset[1]/input").send_keys("testella@gmail.com")
+        driver.find_element_by_xpath("//form/fieldset[2]/input").send_keys("Teszt123")
+        driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/button').click()
+        time.sleep(5)
+
+    login()
+
     # clicking on Settings link to modify data in Settings section
 
     WebDriverWait(driver, 10).until(
