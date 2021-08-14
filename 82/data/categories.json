@@ -1,0 +1,81 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert not True\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"f0a396ddcf0fbb567d8b5b98a780c8e4\", element=\"bc254d10-7821-4402-8efd-e9bb9828a2b5\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"f0a396ddcf0fbb567d8b5b98a780c8e4\", element=\"bc254d10-7821-4402-8efd-e9bb9828a2b5\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"f0a396ddcf0fbb567d8b5b98a780c8e4\", element=\"bc254d10-7821-4402-8efd-e9bb9828a2b5\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"f0a396ddcf0fbb567d8b5b98a780c8e4\", element=\"bc254d10-7821-4402-8efd-e9bb9828a2b5\")> = <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"f0a396ddcf0fbb567d8b5b98a780c8e4\")>>('cookie-policy-panel')\n +        where <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"f0a396ddcf0fbb567d8b5b98a780c8e4\")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"f0a396ddcf0fbb567d8b5b98a780c8e4\")>.find_element_by_id",
+      "children" : [ {
+        "name" : "test_1000_policy",
+        "uid" : "23097ecd4623eea3",
+        "parentUid" : "fb9615dc0ffb5a0126a034e555ce95ef",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628938845641,
+          "stop" : 1628938864811,
+          "duration" : 19170
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fb9615dc0ffb5a0126a034e555ce95ef"
+    }, {
+      "name" : "AssertionError: assert ('Welcome!' == 'Registration failed!'\n  - Registration failed!\n  + Welcome!)",
+      "children" : [ {
+        "name" : "test_reg_1014_15",
+        "uid" : "4a8cfafa27cf24bb",
+        "parentUid" : "bd76ca08e851c9ef2b744d5beef19c4e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628938984123,
+          "stop" : 1628938997273,
+          "duration" : 13150
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "bd76ca08e851c9ef2b744d5beef19c4e"
+    }, {
+      "name" : "AssertionError: assert ('Login failed!' == 'Login failed!'\n    Login failed! and 'Invalid user credentials.' == 'Password field required.'\n  - Password field required.\n  + Invalid user credentials.)",
+      "children" : [ {
+        "name" : "test_1021_log",
+        "uid" : "3ff9bcc34be09820",
+        "parentUid" : "d2725ad4e7dcd3bf37645aed6cbe793f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628939007456,
+          "stop" : 1628939025759,
+          "duration" : 18303
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d2725ad4e7dcd3bf37645aed6cbe793f"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
+      "children" : [ {
+        "name" : "test_1041_upload",
+        "uid" : "ec0a8048564a647f",
+        "parentUid" : "e4a7d37349393b5a9e33d7e741170037",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628939053039,
+          "stop" : 1628939054943,
+          "duration" : 1904
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e4a7d37349393b5a9e33d7e741170037"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
