@@ -56,7 +56,7 @@ def test_1060_pag():
     print("Number of articles in Global feed: ", len(article_title_list))
     print("Global feed's article list: \n", "\n".join(article_title_list))
 
-    assert len(article_title_list) == 26
+    assert len(article_title_list) == 22
 
     # checking if pagination works in terms of no duplicate articles on different pages of the feed
     # fails
