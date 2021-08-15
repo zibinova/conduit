@@ -1,0 +1,111 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert not True\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"35840e6e289e193f1c5f935cd304f99b\", element=\"fc818971-3345-400f-b60b-2cd2a348f213\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"35840e6e289e193f1c5f935cd304f99b\", element=\"fc818971-3345-400f-b60b-2cd2a348f213\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"35840e6e289e193f1c5f935cd304f99b\", element=\"fc818971-3345-400f-b60b-2cd2a348f213\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"35840e6e289e193f1c5f935cd304f99b\", element=\"fc818971-3345-400f-b60b-2cd2a348f213\")> = <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"35840e6e289e193f1c5f935cd304f99b\")>>('cookie-policy-panel')\n +        where <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"35840e6e289e193f1c5f935cd304f99b\")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"35840e6e289e193f1c5f935cd304f99b\")>.find_element_by_id",
+      "children" : [ {
+        "name" : "test_1000_policy",
+        "uid" : "5c1c93d1a592062c",
+        "parentUid" : "570589d0eaeb70e447a8089c47ba8bd0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629007915150,
+          "stop" : 1629007931799,
+          "duration" : 16649
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "570589d0eaeb70e447a8089c47ba8bd0"
+    }, {
+      "name" : "AssertionError: assert ('Welcome!' == 'Registration failed!'\n  - Registration failed!\n  + Welcome!)",
+      "children" : [ {
+        "name" : "test_reg_1014_15",
+        "uid" : "3960a490e83525b3",
+        "parentUid" : "bd76ca08e851c9ef2b744d5beef19c4e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629008051064,
+          "stop" : 1629008064299,
+          "duration" : 13235
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "bd76ca08e851c9ef2b744d5beef19c4e"
+    }, {
+      "name" : "AssertionError: assert ('Login failed!' == 'Login failed!'\n    Login failed! and 'Invalid user credentials.' == 'Password field required.'\n  - Password field required.\n  + Invalid user credentials.)",
+      "children" : [ {
+        "name" : "test_1021_log",
+        "uid" : "864260bc9f2ff474",
+        "parentUid" : "d2725ad4e7dcd3bf37645aed6cbe793f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629008074615,
+          "stop" : 1629008093074,
+          "duration" : 18459
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d2725ad4e7dcd3bf37645aed6cbe793f"
+    }, {
+      "name" : "AssertionError: assert (11 + 5) == 5\n +  where 11 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"6719ca1e5e28e678732ba775d0e7ab5e\", element=\"b2ff0c53-362a-...belement.WebElement (session=\"6719ca1e5e28e678732ba775d0e7ab5e\", element=\"e6ba171e-17c6-4f5e-bc8e-87471b98b1d2\")>, ...])\n +  and   5 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"6719ca1e5e28e678732ba775d0e7ab5e\", element=\"e7402b09-9eb1-...te.webelement.WebElement (session=\"6719ca1e5e28e678732ba775d0e7ab5e\", element=\"816ab34e-fe48-45fb-b076-65dc571aa8a4\")>])",
+      "children" : [ {
+        "name" : "test_1041_upload",
+        "uid" : "d94ad25cb6467fa8",
+        "parentUid" : "8529759d832ef1c5aac0845d2f3013eb",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629008120627,
+          "stop" : 1629008161559,
+          "duration" : 40932
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8529759d832ef1c5aac0845d2f3013eb"
+    }, {
+      "name" : "AssertionError: assert 6 == 16\n +  where 6 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"0006948472a25c540c0f8a3fd8f00f90\", element=\"105e12f5-d3e6-...te.webelement.WebElement (session=\"0006948472a25c540c0f8a3fd8f00f90\", element=\"98794b57-b47b-4e51-b010-de1d63b6d590\")>])\n +  and   16 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"0006948472a25c540c0f8a3fd8f00f90\", element=\"51708ba4-07a6-...belement.WebElement (session=\"0006948472a25c540c0f8a3fd8f00f90\", element=\"e4d3ba0d-3ae4-47b2-8b84-a05faa99a869\")>, ...])",
+      "children" : [ {
+        "name" : "test_1051_list",
+        "uid" : "f4506c4d864bff04",
+        "parentUid" : "0e684037000f443312e803db6e9e1bae",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629008175078,
+          "stop" : 1629008182356,
+          "duration" : 7278
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0e684037000f443312e803db6e9e1bae"
+    }, {
+      "name" : "AssertionError: assert not True\n +  where True = any(<generator object test_1060_pag.<locals>.<genexpr> at 0x7f937293ff90>)",
+      "children" : [ {
+        "name" : "test_1060_pag",
+        "uid" : "87e70af5873abc29",
+        "parentUid" : "02885cdf9ab5e38106dea58d0794ed76",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629008182368,
+          "stop" : 1629008197937,
+          "duration" : 15569
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "02885cdf9ab5e38106dea58d0794ed76"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
