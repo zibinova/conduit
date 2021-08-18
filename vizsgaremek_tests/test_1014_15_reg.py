@@ -1,17 +1,18 @@
 # CON_TC_1014_REG, 1015_REG Sign-up with account/username already existing
 # 1015 expected to fail, app allows using multiple username
 
-def test_reg_1014_15():
-    from selenium import webdriver
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from webdriver_manager.chrome import ChromeDriverManager
-    from selenium.webdriver.chrome.options import Options
-    import time
-    import random
-    import string
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+import time
+import random
+import string
 
+
+def test_reg_1014_15():
     options = Options()
     options.headless = True
 
@@ -27,7 +28,6 @@ def test_reg_1014_15():
     cookie_accept_button = driver.find_element_by_xpath("//div[@class='cookie__bar__buttons']/button[2]")
     cookie_accept_button.click()
 
-
     def user_registration(username, email, password):
         user_name = driver.find_element_by_xpath("//form/fieldset[1]/input")
         e_mail = driver.find_element_by_xpath("//form/fieldset[2]/input")
@@ -40,7 +40,6 @@ def test_reg_1014_15():
         time.sleep(3)
         sign_up_button.click()
 
-
     def assert_handling(expected_title, expected_text):
         WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//div[@class='swal-title']")))
@@ -49,13 +48,11 @@ def test_reg_1014_15():
         swal_text = driver.find_element_by_class_name("swal-text").text
         assert (swal_title == expected_title and swal_text == expected_text)
 
-
     def back_to_form():  # acknowledging error/getting sign up form back
         ok_button = driver.find_element_by_class_name("swal-button")
         ok_button.click()
 
     # generating random test data
-
 
     numeric_part = "".join([random.choice(string.digits) for _ in range(2)])
     lowercase_part = "".join([random.choice(string.ascii_lowercase) for _ in range(4)])
@@ -75,9 +72,8 @@ def test_reg_1014_15():
     time.sleep(5)
     assert_handling("Registration failed!", "Email already taken.")
 
-
-# CON_TC_1015_REG, Sign-up with not yet registered email but already existing username
-# this test expected to give assertion error, since app accepts multiple registration with same usernames
+    # CON_TC_1015_REG, Sign-up with not yet registered email but already existing username
+    # this test expected to give assertion error, since app accepts multiple registration with same usernames
 
     back_to_form()
     time.sleep(2)

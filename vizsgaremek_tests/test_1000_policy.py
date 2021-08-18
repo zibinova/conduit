@@ -9,7 +9,6 @@ import time
 
 
 def test_1000_policy():
-
     options = Options()
     options.headless = True
 
@@ -46,7 +45,3 @@ def test_1000_policy():
     assert not driver.find_element_by_id('cookie-policy-panel').is_displayed()
 
     driver.close()
-
-
-
-

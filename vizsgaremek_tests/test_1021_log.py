@@ -1,17 +1,15 @@
 # CON_TC_1021_LOG User login to Conduit app, missing login data check
-# ez a  teszt elbukik pedig nem kene, manualisan jol lefut,
-# a missing password resznel nem a password required uzit adja,
-# hanem invalid credentials-t
+# expected to fail at missing password part
+
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+import time
+import random
+import string
+
 
 def test_1021_log():
-
-    from selenium import webdriver
-    from webdriver_manager.chrome import ChromeDriverManager
-    from selenium.webdriver.chrome.options import Options
-    import time
-    import random
-    import string
-
     options = Options()
     options.headless = True
 
@@ -31,7 +29,6 @@ def test_1021_log():
     time.sleep(2)
 
     def user_login(email, password):
-
         e_mail = driver.find_element_by_xpath("//form/fieldset[1]/input")
         pass_word = driver.find_element_by_xpath("//form/fieldset[2]/input")
         sign_in_button = driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/button')
@@ -77,18 +74,3 @@ def test_1021_log():
     assert_handling("Login failed!", "Password field required.")
 
     driver.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

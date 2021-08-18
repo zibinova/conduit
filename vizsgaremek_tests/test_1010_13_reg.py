@@ -1,17 +1,16 @@
 #  CON_TC_1010_REG-1013_REG, User registration to Conduit app
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+import time
+import random
+import string
 
 
 def test_1010_13reg():
-    from selenium import webdriver
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from webdriver_manager.chrome import ChromeDriverManager
-    from selenium.webdriver.chrome.options import Options
-    import time
-    import random
-    import string
-
     options = Options()
     options.headless = True
 
@@ -40,7 +39,6 @@ def test_1010_13reg():
         sign_up_button.click()
 
     def assert_handling(expected_title, expected_text):
-
         WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//div[@class='swal-title']")))
 
@@ -89,8 +87,7 @@ def test_1010_13reg():
     time.sleep(3)
     assert_handling("Registration failed!", "Password field required.")
 
-
-# CON_TC_1013_REG happy path successful user reg.
+    # CON_TC_1013_REG happy path successful user reg.
 
     back_to_form()
     time.sleep(2)
@@ -104,4 +101,3 @@ def test_1010_13reg():
     assert user.text == rnd_un
 
     driver.close()
-

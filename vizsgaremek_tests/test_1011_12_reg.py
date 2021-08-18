@@ -1,16 +1,16 @@
 # CON_TC_1011_REG, CON_TC_1012_REG email address and password formal validity check
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+import time
+import random
+import string
+
 
 def test_1011_reg():
-    from selenium import webdriver
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from webdriver_manager.chrome import ChromeDriverManager
-    from selenium.webdriver.chrome.options import Options
-    import time
-    import random
-    import string
-
     options = Options()
     options.headless = True
 
@@ -39,7 +39,6 @@ def test_1011_reg():
         sign_up_button.click()
 
     def assert_handling(expected_title, expected_text):
-
         WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//div[@class='swal-title']")))
 

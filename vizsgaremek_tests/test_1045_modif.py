@@ -9,7 +9,6 @@ import time
 
 
 def test_1045_data_mod():
-
     options = Options()
     options.headless = True
 
@@ -55,6 +54,3 @@ def test_1045_data_mod():
     assert bio.get_attribute("value") == entry
 
     driver.close()
-
-
-

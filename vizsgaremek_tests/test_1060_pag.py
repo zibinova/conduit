@@ -1,6 +1,6 @@
 # CON_TC_1060_PAG : Pagination test in global feed
 # expected to fail since app displays same articles on multiple pages,
-# throws the last couple of articles to the following page
+# throws the last couple of articles per page to the following page
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -9,7 +9,6 @@ import time
 
 
 def test_1060_pag():
-
     options = Options()
     options.headless = True
 

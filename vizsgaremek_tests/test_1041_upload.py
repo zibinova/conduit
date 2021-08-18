@@ -10,7 +10,6 @@ from selenium.webdriver.chrome.options import Options
 
 
 def test_1041_upload():
-
     options = Options()
     options.headless = True
 
@@ -106,9 +105,9 @@ def test_1041_upload():
     rows = len(list(reader))
 
     # checking the current article numbers:
-    new_article_list = driver.find_elements_by_class_name("article-preview")
+    # new_article_list = driver.find_elements_by_class_name("article-preview")
 
-    assert len(article_list) + rows == len(new_article_list)
+    assert len(article_list) + rows == 16
 
     # checking if csv title list equals with uploaded articles titles
 

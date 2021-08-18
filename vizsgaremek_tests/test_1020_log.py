@@ -1,17 +1,17 @@
 # CON_TC_1020_LOG User login to Conduit app with not existing account
 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+import time
+import random
+import string
+
+
 def test_1020_log():
-
-    from selenium import webdriver
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from webdriver_manager.chrome import ChromeDriverManager
-    from selenium.webdriver.chrome.options import Options
-    import time
-    import random
-    import string
-
     options = Options()
     options.headless = True
 
@@ -31,7 +31,6 @@ def test_1020_log():
     time.sleep(2)
 
     def user_login(email, password):
-
         e_mail = driver.find_element_by_xpath("//form/fieldset[1]/input")
         pass_word = driver.find_element_by_xpath("//form/fieldset[2]/input")
         sign_in_button = driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/button')
@@ -70,5 +69,3 @@ def test_1020_log():
     time.sleep(2)
 
     driver.close()
-
-

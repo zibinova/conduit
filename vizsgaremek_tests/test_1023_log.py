@@ -1,12 +1,12 @@
 # CON_TC_1023_LOG User login to Conduit happy path
 
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+import time
+
+
 def test_1023_log():
-
-    from selenium import webdriver
-    from webdriver_manager.chrome import ChromeDriverManager
-    from selenium.webdriver.chrome.options import Options
-    import time
-
     options = Options()
     options.headless = True
 
@@ -26,7 +26,6 @@ def test_1023_log():
     time.sleep(2)
 
     def user_login(email, password):
-
         e_mail = driver.find_element_by_xpath("//form/fieldset[1]/input")
         pass_word = driver.find_element_by_xpath("//form/fieldset[2]/input")
         sign_in_button = driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/button')
@@ -47,27 +46,3 @@ def test_1023_log():
     assert your_feed.is_displayed()
 
     driver.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
