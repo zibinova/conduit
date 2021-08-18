@@ -1,0 +1,77 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert not True\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"1eba9931de0061f3f2b0e1a0f08eeb89\", element=\"5bc396f0-3864-4190-9219-6ac98dcd3f04\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"1eba9931de0061f3f2b0e1a0f08eeb89\", element=\"5bc396f0-3864-4190-9219-6ac98dcd3f04\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"1eba9931de0061f3f2b0e1a0f08eeb89\", element=\"5bc396f0-3864-4190-9219-6ac98dcd3f04\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"1eba9931de0061f3f2b0e1a0f08eeb89\", element=\"5bc396f0-3864-4190-9219-6ac98dcd3f04\")> = <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"1eba9931de0061f3f2b0e1a0f08eeb89\")>>('cookie-policy-panel')\n +        where <bound method WebDriver.find_element_by_id of <selenium.webdriver.chrome.webdriver.WebDriver (session=\"1eba9931de0061f3f2b0e1a0f08eeb89\")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"1eba9931de0061f3f2b0e1a0f08eeb89\")>.find_element_by_id",
+      "children" : [ {
+        "name" : "test_1000_policy",
+        "uid" : "c468b979d87b69f5",
+        "parentUid" : "85cf7187544cc66801e63e69921b5999",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629290359930,
+          "stop" : 1629290373315,
+          "duration" : 13385
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "85cf7187544cc66801e63e69921b5999"
+    }, {
+      "name" : "AssertionError: assert ('Welcome!' == 'Registration failed!'\n  - Registration failed!\n  + Welcome!)",
+      "children" : [ {
+        "name" : "test_reg_1014_15",
+        "uid" : "26ee91693f9abcfc",
+        "parentUid" : "bd76ca08e851c9ef2b744d5beef19c4e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629290492137,
+          "stop" : 1629290505269,
+          "duration" : 13132
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "bd76ca08e851c9ef2b744d5beef19c4e"
+    }, {
+      "name" : "AssertionError: assert ('Login failed!' == 'Login failed!'\n    Login failed! and 'Invalid user credentials.' == 'Password field required.'\n  - Password field required.\n  + Invalid user credentials.)",
+      "children" : [ {
+        "name" : "test_1021_log",
+        "uid" : "909e8c14394f5f67",
+        "parentUid" : "d2725ad4e7dcd3bf37645aed6cbe793f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629290515383,
+          "stop" : 1629290533634,
+          "duration" : 18251
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d2725ad4e7dcd3bf37645aed6cbe793f"
+    }, {
+      "name" : "AssertionError: assert not True\n +  where True = any(<generator object test_1060_pag.<locals>.<genexpr> at 0x7fa4d4b425f0>)",
+      "children" : [ {
+        "name" : "test_1060_pag",
+        "uid" : "32c4933629815ad6",
+        "parentUid" : "d8406a0242f39d678d47e46dad9d8b1e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629290622288,
+          "stop" : 1629290637658,
+          "duration" : 15370
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d8406a0242f39d678d47e46dad9d8b1e"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
