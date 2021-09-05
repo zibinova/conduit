@@ -1,0 +1,140 @@
+{
+  "uid" : "880948c1a75219cf",
+  "name" : "test_1041_upload",
+  "fullName" : "vizsgaremek_tests.test_1041_upload#test_1041_upload",
+  "historyId" : "2b107ec223bf494035e5ba2851aa1297",
+  "time" : {
+    "start" : 1630833605043,
+    "stop" : 1630833646084,
+    "duration" : 41041
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "fb78e7f5edcfd998",
+      "name" : "log",
+      "source" : "fb78e7f5edcfd998.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "3d5f76c82a5bfa35",
+      "name" : "stdout",
+      "source" : "3d5f76c82a5bfa35.txt",
+      "type" : "text/plain",
+      "size" : 106
+    }, {
+      "uid" : "3203138dd50ae1a4",
+      "name" : "stderr",
+      "source" : "3203138dd50ae1a4.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "vizsgaremek_tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1041_upload"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-279"
+  }, {
+    "name" : "thread",
+    "value" : "3611-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "vizsgaremek_tests.test_1041_upload"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "edb425fba2b63e76",
+        "reportUrl" : "https://zibinova.github.io/conduit/87//#testresult/edb425fba2b63e76",
+        "status" : "passed",
+        "time" : {
+          "start" : 1630833578528,
+          "stop" : 1630833619520,
+          "duration" : 40992
+        }
+      }, {
+        "uid" : "27635eda2140cf43",
+        "reportUrl" : "https://zibinova.github.io/conduit/15//#testresult/27635eda2140cf43",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629290560671,
+          "stop" : 1629290601300,
+          "duration" : 40629
+        }
+      }, {
+        "uid" : "eaf02c8872b6b2c8",
+        "reportUrl" : "https://zibinova.github.io/conduit/14//#testresult/eaf02c8872b6b2c8",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert (11 + 5) == 5\n +  where 11 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"e85a5f2498eec3c378641627d2140f70\", element=\"ee50ee47-f4d0-...belement.WebElement (session=\"e85a5f2498eec3c378641627d2140f70\", element=\"60c514a5-ba6f-4535-82a2-bf820f4eb125\")>, ...])\n +  and   5 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"e85a5f2498eec3c378641627d2140f70\", element=\"5a13bde8-c8fb-...te.webelement.WebElement (session=\"e85a5f2498eec3c378641627d2140f70\", element=\"a35804c4-e664-4c34-a669-e3b6168d989c\")>])",
+        "time" : {
+          "start" : 1629008144326,
+          "stop" : 1629008184969,
+          "duration" : 40643
+        }
+      }, {
+        "uid" : "d94ad25cb6467fa8",
+        "reportUrl" : "https://zibinova.github.io/conduit/85//#testresult/d94ad25cb6467fa8",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert (11 + 5) == 5\n +  where 11 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"6719ca1e5e28e678732ba775d0e7ab5e\", element=\"b2ff0c53-362a-...belement.WebElement (session=\"6719ca1e5e28e678732ba775d0e7ab5e\", element=\"e6ba171e-17c6-4f5e-bc8e-87471b98b1d2\")>, ...])\n +  and   5 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"6719ca1e5e28e678732ba775d0e7ab5e\", element=\"e7402b09-9eb1-...te.webelement.WebElement (session=\"6719ca1e5e28e678732ba775d0e7ab5e\", element=\"816ab34e-fe48-45fb-b076-65dc571aa8a4\")>])",
+        "time" : {
+          "start" : 1629008120627,
+          "stop" : 1629008161559,
+          "duration" : 40932
+        }
+      }, {
+        "uid" : "ec33d457cd8fd803",
+        "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/ec33d457cd8fd803",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert (11 + 5) == 5\n +  where 11 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"2e0ee87d9200dfb3bd6935af6fac6bf5\", element=\"439dd018-90f8-...belement.WebElement (session=\"2e0ee87d9200dfb3bd6935af6fac6bf5\", element=\"7d53c105-52b4-45ea-b770-4b5723075a51\")>, ...])\n +  and   5 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"2e0ee87d9200dfb3bd6935af6fac6bf5\", element=\"aebb41a0-a2a6-...te.webelement.WebElement (session=\"2e0ee87d9200dfb3bd6935af6fac6bf5\", element=\"c9f8537f-0107-42a3-85c4-05f2c880f03a\")>])",
+        "time" : {
+          "start" : 1628971379308,
+          "stop" : 1628971419890,
+          "duration" : 40582
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "880948c1a75219cf.json",
+  "parameterValues" : [ ]
+}
