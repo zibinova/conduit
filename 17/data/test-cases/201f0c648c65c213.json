@@ -1,0 +1,149 @@
+{
+  "uid" : "201f0c648c65c213",
+  "name" : "test_1024_logout",
+  "fullName" : "vizsgaremek_tests.test_1024_logout#test_1024_logout",
+  "historyId" : "117fde88c18f4ce68ab356f31d58b4f6",
+  "time" : {
+    "start" : 1631001981038,
+    "stop" : 1631001989106,
+    "duration" : 8068
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "1f571add7a41cb0d",
+      "name" : "log",
+      "source" : "1f571add7a41cb0d.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "f0308e2eb4f6b29a",
+      "name" : "stderr",
+      "source" : "f0308e2eb4f6b29a.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "vizsgaremek_tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1024_logout"
+  }, {
+    "name" : "host",
+    "value" : "fv-az39-190"
+  }, {
+    "name" : "thread",
+    "value" : "3627-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "vizsgaremek_tests.test_1024_logout"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "29f6306e9a9dfc9f",
+        "reportUrl" : "https://zibinova.github.io/conduit/88//#testresult/29f6306e9a9dfc9f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1631001956835,
+          "stop" : 1631001964920,
+          "duration" : 8085
+        }
+      }, {
+        "uid" : "bbbbc788eefdaa1d",
+        "reportUrl" : "https://zibinova.github.io/conduit/16//#testresult/bbbbc788eefdaa1d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1630833585659,
+          "stop" : 1630833593840,
+          "duration" : 8181
+        }
+      }, {
+        "uid" : "91e334f12b3147a3",
+        "reportUrl" : "https://zibinova.github.io/conduit/87//#testresult/91e334f12b3147a3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1630833559573,
+          "stop" : 1630833567790,
+          "duration" : 8217
+        }
+      }, {
+        "uid" : "74016c325f2d9986",
+        "reportUrl" : "https://zibinova.github.io/conduit/15//#testresult/74016c325f2d9986",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629290541711,
+          "stop" : 1629290549735,
+          "duration" : 8024
+        }
+      }, {
+        "uid" : "f808cbb9f7afe03",
+        "reportUrl" : "https://zibinova.github.io/conduit/14//#testresult/f808cbb9f7afe03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629008125263,
+          "stop" : 1629008133351,
+          "duration" : 8088
+        }
+      }, {
+        "uid" : "d0ed2802bf928579",
+        "reportUrl" : "https://zibinova.github.io/conduit/85//#testresult/d0ed2802bf928579",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629008101330,
+          "stop" : 1629008109522,
+          "duration" : 8192
+        }
+      }, {
+        "uid" : "b0820c51730f0daf",
+        "reportUrl" : "https://zibinova.github.io/conduit/13//#testresult/b0820c51730f0daf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628971360388,
+          "stop" : 1628971368436,
+          "duration" : 8048
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "201f0c648c65c213.json",
+  "parameterValues" : [ ]
+}
